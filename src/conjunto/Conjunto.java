@@ -5,10 +5,19 @@
  */
 package conjunto;
 import Controlador.ingreso;
+import Controlador.Base;
 import Modelo.Modelo;
 import Vista.Vistaconexion;
 import Vista.vistaingreso;
 import Vista.VistaBase;
+import Vista.VistaPropietarios;
+import Vista.VistaRegistoTrab;
+import Vista.VistaRegistroP;
+import Vista.VistaRegistroResid;
+import Vista.VistaResS;
+import Vista.VistaTraRes;
+import Vista.VistaTrab;
+import Vista.VistaZonas;
 import javax.swing.JOptionPane;
 
 /**
@@ -28,9 +37,16 @@ public class Conjunto {
       VistaBase VistaBase =new VistaBase();
       ingreso conotra=new ingreso(Vingre,VistaBase,con);
       Vingre.setVisible(true);
-      
-    
-    
+      VistaBase vistabase = new VistaBase();
+      VistaPropietarios vistapro= new VistaPropietarios();
+      VistaRegistroP vistarp=new VistaRegistroP();
+      VistaResS vistars=new VistaResS();
+      VistaRegistroResid vistarr =new VistaRegistroResid();
+      VistaTrab vistatrab = new VistaTrab();
+      VistaRegistoTrab vistart =new VistaRegistoTrab();
+      VistaZonas vistazona=new VistaZonas();
+      VistaTraRes vistatr =new VistaTraRes();
+      Base contrabase=new Base( vistabase,vistapro, vistarp, vistars, vistarr,vistatrab, vistart, vistazona, vistatr);
         
     }
     

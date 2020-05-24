@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Controlador;
+import Vista.VistaBase;
 import Vista.VistaPropietarios;
 import Vista.VistaRegistroP;
 import Vista.VistaResS;
@@ -19,6 +20,7 @@ import java.awt.event.ActionListener;
  * @author Jairo
  */
 public class Base  implements ActionListener {
+    private VistaBase vistabase;
     private VistaPropietarios vistapro;
     private VistaRegistroP vistarp;
     private VistaResS vistars;
@@ -28,10 +30,33 @@ public class Base  implements ActionListener {
     private VistaZonas vistazona;
     private VistaTraRes vistatr;
     
+    public Base(VistaBase vistabase,VistaPropietarios vistapro,VistaRegistroP vistarp, VistaResS vistars,VistaRegistroResid vistarr,VistaTrab vistatrab,VistaRegistoTrab vistart,VistaZonas vistazona,VistaTraRes vistatr){
+    this.vistabase=vistabase;
+    this.vistapro=vistapro;
+    this.vistarp=vistarp;
+    this.vistars=vistars;
+    this.vistarr=vistarr;
+    this.vistatrab=vistatrab;
+    this.vistart=vistart;
+    this.vistazona=vistazona;
+    this.vistatr=vistatr;
+    this.vistabase.propietario.addActionListener(this);
+    this.vistabase.registropro.addActionListener(this);
+    this.vistabase.registroresi.addActionListener(this);
+    this.vistabase.registrotrab.addActionListener(this);
+    this.vistabase.residentes.addActionListener(this);
+    this.vistabase.resitrab.addActionListener(this);
+    this.vistabase.trabajadores.addActionListener(this);
+    this.vistabase.zonas.addActionListener(this);
+    }
     
     @Override
-    public void actionPerformed(ActionEvent e) {
-      
+    public void actionPerformed(ActionEvent x) {
+        if(x.getSource()== vistabase.propietario){
+            System.out.println("hola");
+         vistabase.setVisible(false);
+        vistapro.setVisible(true);
+        }
     }
     
 }
