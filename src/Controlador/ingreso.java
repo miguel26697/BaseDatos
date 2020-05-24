@@ -58,7 +58,7 @@ public class ingreso  implements ActionListener {
                 }else if(rs.getString("tipo").equals("celador")){
                  JOptionPane.showMessageDialog(null, "celador");
                 JOptionPane.showMessageDialog(null, "celador1");
-                  JOptionPane.showMessageDialog(null, "celador2");
+                  JOptionPane.showMessageDialog(null, "hola perra johan");
                 
                 }
               }
