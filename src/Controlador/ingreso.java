@@ -52,21 +52,25 @@ public class ingreso  implements ActionListener {
                 Vingre.setVisible(false);
                 VistaBase.setVisible(true);
             } 
-            //swwwwwhkgjhf
             else if(!rs.getString("clave").equals(Vingre.jPasswordField1.getText())){
             JOptionPane.showMessageDialog(null, "Usuario o clave incorrectas");
             }
                 }else if(rs.getString("tipo").equals("celador")){
                  JOptionPane.showMessageDialog(null, "celador");
-
-
+                
                 
                 }
-              }
+            
+              }else if(){
+                      
+                      
+                      }
             } catch (SQLException ex) {
                 Logger.getLogger(ingreso.class.getName()).log(Level.SEVERE, null, ex);
             } 
-          
+            
+             
+      
         
         }
         
