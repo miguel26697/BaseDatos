@@ -53,7 +53,7 @@ public class Base  implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent x) {
         if(x.getSource()== vistabase.propietario){
-            System.out.println("hola");
+          
          vistabase.setVisible(false);
         vistapro.setVisible(true);
         }
