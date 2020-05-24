@@ -52,7 +52,7 @@ public class ingreso  implements ActionListener {
                 Vingre.setVisible(false);
                 VistaBase.setVisible(true);
             } 
-            //swwwww
+            //swwwwwhkgjhf
             else if(!rs.getString("clave").equals(Vingre.jPasswordField1.getText())){
             JOptionPane.showMessageDialog(null, "Usuario o clave incorrectas");
             }
