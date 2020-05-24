@@ -119,7 +119,7 @@ insert into propietarios values ("1234","jairo","caro","350750");
 insert into usuario values("jairo","1234","admin");
 insert into usuario values("miguel","1234","celador");
 
-
+hola
 
 
 
