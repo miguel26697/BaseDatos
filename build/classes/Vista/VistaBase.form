@@ -59,7 +59,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" pref="438" max="32767" attributes="0"/>
+          <Component id="jPanel1" alignment="1" pref="491" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -82,22 +82,24 @@
                           <EmptySpace min="73" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jButton4" max="32767" attributes="0"/>
+                              <Component id="jButton5" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jButton3" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jButton1" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jButton3" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
-                              <Component id="jButton5" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
-                              <Component id="jButton1" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
-                              <Component id="jButton4" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jButton2" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
-                                  <Component id="Eliminar" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
+                                  <Component id="Eliminar" min="-2" pref="133" max="-2" attributes="0"/>
+                                  <Component id="jButton2" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="Eliminar2" min="-2" pref="102" max="-2" attributes="0"/>
-                              <Component id="Eliminar1" min="-2" pref="102" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="Eliminar1" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="Eliminar2" alignment="0" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="323" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="286" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
