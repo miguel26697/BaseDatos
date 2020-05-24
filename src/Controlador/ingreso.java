@@ -60,7 +60,7 @@ public class ingreso  implements ActionListener {
                 
                 
                 }
-            
+            holaaaa
               }
             } catch (SQLException ex) {
                 Logger.getLogger(ingreso.class.getName()).log(Level.SEVERE, null, ex);
