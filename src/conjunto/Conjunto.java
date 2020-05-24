@@ -35,7 +35,6 @@ public class Conjunto {
    
       vistaingreso Vingre =new vistaingreso();
       VistaBase VistaBase =new VistaBase();
-      ingreso conotra=new ingreso(Vingre,VistaBase,con);
       Vingre.setVisible(true);
       VistaBase vistabase = new VistaBase();
       VistaPropietarios vistapro= new VistaPropietarios();
@@ -46,6 +45,7 @@ public class Conjunto {
       VistaRegistoTrab vistart =new VistaRegistoTrab();
       VistaZonas vistazona=new VistaZonas();
       VistaTraRes vistatr =new VistaTraRes();
+      ingreso conotra=new ingreso(Vingre,VistaBase,con);
       Base contrabase=new Base( vistabase,vistapro, vistarp, vistars, vistarr,vistatrab, vistart, vistazona, vistatr);
         
     }

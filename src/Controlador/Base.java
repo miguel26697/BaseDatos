@@ -55,7 +55,7 @@ public class Base  implements ActionListener {
         if(x.getSource()== vistabase.propietario){
           
          vistabase.setVisible(false);
-        vistapro.setVisible(true);
+         vistapro.setVisible(true);
         }
     }
     
