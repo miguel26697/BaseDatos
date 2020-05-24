@@ -59,6 +59,20 @@ public class ingreso  implements ActionListener {
                  JOptionPane.showMessageDialog(null, "celador");
                 JOptionPane.showMessageDialog(null, "celador1");
                   JOptionPane.showMessageDialog(null, "hola perra johan");
+                  JOptionPane.showMessageDialog(null, "hola perra johan");JOptionPane.showMessageDialog(null, "hola perra johan");
+                  JOptionPane.showMessageDialog(null, "hola perra johan");
+                  JOptionPane.showMessageDialog(null, "hola perra johan");
+               
+                          JOptionPane.showMessageDialog(null, "hola perra johan");
+                          JOptionPane.showMessageDialog(null, "hola perra johan");
+                          JOptionPane.showMessageDialog(null, "hola perra johan");
+                          JOptionPane.showMessageDialog(null, "hola perra johan");
+                          JOptionPane.showMessageDialog(null, "hola perra johan");
+                         
+                                  JOptionPane.showMessageDialog(null, "hola perra johan");
+                                  JOptionPane.showMessageDialog(null, "hola perra johan");
+                                  JOptionPane.showMessageDialog(null, "hola perra johan");
+                  
                 
                 }
               }
