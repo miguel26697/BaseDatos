@@ -9,6 +9,7 @@ package Modelo;
  *
  * @author david
  */
+
 public class Modelo {
     
 }

@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Controlador;
+
 import Vista.vistaingreso;
 import Vista.VistaBase;
 import conjunto.conexion;
@@ -30,11 +31,12 @@ import Vista.VistaZonas;
  *
  * @author Jairo
  */
-public class ingreso  implements ActionListener {
+public class ingreso implements ActionListener {
+
     private vistaingreso Vingre;
     private VistaBase VistaBase;
     private conexion con;
-     private VistaPropietarios vistapro;
+    private VistaPropietarios vistapro;
     private VistaRegistroP vistarp;
     private VistaResS vistars;
     private VistaRegistroResid vistarr;
@@ -42,59 +44,56 @@ public class ingreso  implements ActionListener {
     private VistaRegistoTrab vistart;
     private VistaZonas vistazona;
     private VistaTraRes vistatr;
-    
-    public ingreso(vistaingreso Vingre,VistaBase VistaBase,conexion con,VistaBase vistabase,VistaPropietarios vistapro,VistaRegistroP vistarp, VistaResS vistars,VistaRegistroResid vistarr,VistaTrab vistatrab,VistaRegistoTrab vistart,VistaZonas vistazona,VistaTraRes vistatr){
-    this.Vingre=Vingre;
-    this.VistaBase=VistaBase;
-     this.vistapro=vistapro;
-    this.vistarp=vistarp;
-    this.vistars=vistars;
-    this.vistarr=vistarr;
-    this.vistatrab=vistatrab;
-    this.vistart=vistart;
-    this.vistazona=vistazona;
-    this.vistatr=vistatr;
-    this.con=con;
-    this.Vingre.jButton1.addActionListener(this);
-    
+
+    public ingreso(vistaingreso Vingre, VistaBase VistaBase, conexion con, VistaBase vistabase, VistaPropietarios vistapro, VistaRegistroP vistarp, VistaResS vistars, VistaRegistroResid vistarr, VistaTrab vistatrab, VistaRegistoTrab vistart, VistaZonas vistazona, VistaTraRes vistatr) {
+        this.Vingre = Vingre;
+        this.VistaBase = VistaBase;
+        this.vistapro = vistapro;
+        this.vistarp = vistarp;
+        this.vistars = vistars;
+        this.vistarr = vistarr;
+        this.vistatrab = vistatrab;
+        this.vistart = vistart;
+        this.vistazona = vistazona;
+        this.vistatr = vistatr;
+        this.con = con;
+        this.Vingre.jButton1.addActionListener(this);
+
     }
 
     @Override
     public void actionPerformed(ActionEvent x) {
-        
-        if(x.getSource() == Vingre.jButton1){
+
+        if (x.getSource() == Vingre.jButton1) {
+            Base bd = new Base(VistaBase, vistapro, vistarp, vistars, vistarr, vistatrab, vistart, vistazona, vistatr, con);
+            Vingre.setVisible(false);
+            VistaBase.setVisible(true);
             try {
-            String clave="Select clave,tipo  from usuario where usuario.usuario ='"+Vingre.jTextField1.getText()+"'";
-            PreparedStatement ps;
-            ResultSet rs;
-            ps=con.conexion().prepareStatement(clave);
-                rs=ps.executeQuery();
-                while(rs.next()){
-            if(rs.getString("tipo").equals("admin")){   
-            if(rs.getString("clave").equals(Vingre.jPasswordField1.getText())){
-                Base bd=new Base(VistaBase,vistapro, vistarp, vistars, vistarr,vistatrab, vistart, vistazona, vistatr,con);
-                Vingre.setVisible(false);
-                VistaBase.setVisible(true);
-            } 
-            else if(!rs.getString("clave").equals(Vingre.jPasswordField1.getText())){
-            JOptionPane.showMessageDialog(null, "Usuario o clave incorrectas");
-            }
-                }else if(rs.getString("tipo").equals("celador")){
-                 JOptionPane.showMessageDialog(null, "celador");
+                String clave = "Select clave,tipo  from usuario where usuario.usuario ='" + Vingre.jTextField1.getText() + "'";
+                PreparedStatement ps;
+                ResultSet rs;
+                ps = con.conexion().prepareStatement(clave);
+                rs = ps.executeQuery();
+                while (rs.next()) {
+                    if (rs.getString("tipo").equals("admin")) {
+                        if (rs.getString("clave").equals(Vingre.jPasswordField1.getText())) {
+                            //Base bd = new Base(VistaBase, vistapro, vistarp, vistars, vistarr, vistatrab, vistart, vistazona, vistatr, con);
+                            Vingre.setVisible(false);
+                            VistaBase.setVisible(true);
+                        } else if (!rs.getString("clave").equals(Vingre.jPasswordField1.getText())) {
+                            JOptionPane.showMessageDialog(null, "Usuario o clave incorrectas");
+                        }
+                    } else if (rs.getString("tipo").equals("celador")) {
+                        JOptionPane.showMessageDialog(null, "celador");
+                    }
+
                 }
-            
-              }
             } catch (SQLException ex) {
                 Logger.getLogger(ingreso.class.getName()).log(Level.SEVERE, null, ex);
-            } 
-            
-             
-      
-        
+            }
+
         }
-        
-        
-     
+
     }
-    
+
 }

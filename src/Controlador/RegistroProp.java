@@ -29,56 +29,57 @@ import javax.swing.JOptionPane;
  *
  * @author migue
  */
-public class RegistroProp {
+public class RegistroProp implements ActionListener {
 
     private VistaBase VistaBase;
     private VistaRegistroP vistarp;
     private conexion con;
 
-    public RegistroProp(VistaBase VistaBase, VistaRegistroP vistarp, conexion con) {
-        this.VistaBase = VistaBase;
+    public RegistroProp(VistaBase VistaBase,VistaRegistroP vistarp, conexion con) {
         this.vistarp = vistarp;
+        this.VistaBase = VistaBase;
         this.con = con;
-        this.vistarp.jButton1.addActionListener((ActionListener) this);
-
+        this.vistarp.jButton1.addActionListener(this);
+        this.vistarp.jButton2.addActionListener(this);
     }
 
-    public void actionPerformed(ActionEvent x) {
+    @Override
+    public void actionPerformed(ActionEvent e) {
 
-        if (x.getSource() == vistarp.jButton1) {
-            String id = vistarp.jTextField1.getText();
+        if (e.getSource() == vistarp.jButton1) {
+        if (vistarp.jTextField1.getText().length() != 0 && vistarp.jTextField2.getText().length() != 0 && vistarp.jTextField3.getText().length() != 0 && vistarp.jTextField4.getText().length() != 0) {
+            try{
+            int id = Integer.parseInt(vistarp.jTextField1.getText());
             String nombre = vistarp.jTextField2.getText();
             String apellido = vistarp.jTextField3.getText();
             String telefono = vistarp.jTextField4.getText();
-            String torre = vistarp.jComboBox2.getActionCommand();
-            String apartamento = vistarp.jComboBox3.getActionCommand();
-            String tipo = vistarp.jTextField5.getText();
-            
-            System.out.println(""+id);
-            System.out.println(""+nombre);
-            System.out.println(""+apellido);
-            System.out.println(""+torre);
-            System.out.println(""+apartamento);
-            System.out.println(""+id);
-            
-            try {
-                String sql = "insert into tblnotas (codigo_materia,identificacion_es,identificacion_pro,nota,fecha_nota) values (?,?,?,?,?)";
-                PreparedStatement pst = con.conexion().prepareStatement(sql);
-                pst.setString(1, id);
-                pst.setString(2, nombre);
-                pst.setString(3, apellido);
-                pst.setString(4, telefono);
-                //pst.setString(5, torre);
-                int registro = pst.executeUpdate();
-                if (registro > 0) {
-                    JOptionPane.showMessageDialog(null, "Registro Almacenamiento correctamete");
-                    
-                }
-            } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, "registro no actulizado" + e.getMessage());
-            }
+            PreparedStatement ps;
+                try {
+                    ps = con.conexion().prepareStatement("insert into propietarios(id_propietarios,nombres,apellidos,telefono)values('" + Integer.toString(id) + "','" + nombre + "','" + apellido + "','" + telefono + "')");
+                    ps.executeUpdate();
+                    JOptionPane.showMessageDialog(null, "Registro Almacenado correctamete");
+                    vistarp.jTextField1.setText(null);
+                    vistarp.jTextField2.setText(null);
+                    vistarp.jTextField3.setText(null);
+                    vistarp.jTextField4.setText(null);
 
+                } catch (Exception x) {
+                    JOptionPane.showMessageDialog(null, "Registro no Almacenado " + x.getMessage());
+                    System.out.println(""+x);
+                } 
+            }catch(NumberFormatException a){
+                JOptionPane.showMessageDialog(null, " El ID debe ser un numero ");
+            }
+                   
+            } else {
+                JOptionPane.showMessageDialog(null, " Complete los campos ");
+            }
         }
+        if(e.getSource() == vistarp.jButton2){
+            vistarp.setVisible(false);
+            vistarp.dispose();
+            VistaBase.setVisible(true);
+     }
 
     }
 
