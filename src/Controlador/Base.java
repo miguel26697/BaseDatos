@@ -16,7 +16,11 @@ import Vista.VistaZonas;
 import Vista.VistaTraRes;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+<<<<<<< HEAD
 
+=======
+import conjunto.conexion;
+>>>>>>> master
 /**
  *
  * @author Jairo
@@ -32,6 +36,7 @@ public class Base implements ActionListener {
     private VistaRegistoTrab vistart;
     private VistaZonas vistazona;
     private VistaTraRes vistatr;
+<<<<<<< HEAD
 
     public Base(VistaBase vistabase, VistaPropietarios vistapro, VistaRegistroP vistarp, VistaResS vistars, VistaRegistroResid vistarr, VistaTrab vistatrab, VistaRegistoTrab vistart, VistaZonas vistazona, VistaTraRes vistatr) {
         this.vistabase = vistabase;
@@ -51,6 +56,29 @@ public class Base implements ActionListener {
         this.vistabase.resitrab.addActionListener(this);
         this.vistabase.trabajadores.addActionListener(this);
         this.vistabase.zonas.addActionListener(this);
+=======
+    private conexion con;
+    
+    public Base(VistaBase vistabase,VistaPropietarios vistapro,VistaRegistroP vistarp, VistaResS vistars,VistaRegistroResid vistarr,VistaTrab vistatrab,VistaRegistoTrab vistart,VistaZonas vistazona,VistaTraRes vistatr,conexion con){
+    this.vistabase=vistabase;
+    this.vistapro=vistapro;
+    this.vistarp=vistarp;
+    this.vistars=vistars;
+    this.vistarr=vistarr;
+    this.vistatrab=vistatrab;
+    this.vistart=vistart;
+    this.vistazona=vistazona;
+    this.vistatr=vistatr;
+    this.con=con;
+    this.vistabase.propietario.addActionListener(this);
+    this.vistabase.registropro.addActionListener(this);
+    this.vistabase.registroresi.addActionListener(this);
+    this.vistabase.registrotrab.addActionListener(this);
+    this.vistabase.residentes.addActionListener(this);
+    this.vistabase.resitrab.addActionListener(this);
+    this.vistabase.trabajadores.addActionListener(this);
+    this.vistabase.zonas.addActionListener(this);
+>>>>>>> master
     }
 
     @Override
@@ -68,9 +96,16 @@ public class Base implements ActionListener {
             vistabase.setVisible(false);
             vistars.setVisible(true);
         }
+<<<<<<< HEAD
         if (x.getSource() == vistabase.registroresi) {
             vistabase.setVisible(false);
             vistarr.setVisible(true);
+=======
+        if(x.getSource()==vistabase.registroresi){
+        RegistoResidente rg=new RegistoResidente(vistarr,con);
+        vistabase.setVisible(false);
+        vistarr.setVisible(true);
+>>>>>>> master
         }
         if (x.getSource() == vistabase.trabajadores) {
             vistabase.setVisible(false);

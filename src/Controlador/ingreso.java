@@ -72,7 +72,7 @@ public class ingreso  implements ActionListener {
                 while(rs.next()){
             if(rs.getString("tipo").equals("admin")){   
             if(rs.getString("clave").equals(Vingre.jPasswordField1.getText())){
-                Base bd=new Base(VistaBase,vistapro, vistarp, vistars, vistarr,vistatrab, vistart, vistazona, vistatr);
+                Base bd=new Base(VistaBase,vistapro, vistarp, vistars, vistarr,vistatrab, vistart, vistazona, vistatr,con);
                 Vingre.setVisible(false);
                 VistaBase.setVisible(true);
             } 
