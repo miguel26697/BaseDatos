@@ -45,8 +45,8 @@ public class Conjunto {
       VistaRegistoTrab vistart =new VistaRegistoTrab();
       VistaZonas vistazona=new VistaZonas();
       VistaTraRes vistatr =new VistaTraRes();
-      ingreso conotra=new ingreso(Vingre,VistaBase,con);
-      Base contrabase=new Base( vistabase,vistapro, vistarp, vistars, vistarr,vistatrab, vistart, vistazona, vistatr);
+      ingreso conotra=new ingreso(Vingre,VistaBase,con,vistabase,vistapro, vistarp, vistars, vistarr,vistatrab, vistart, vistazona, vistatr);
+     
         
     }
     

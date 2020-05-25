@@ -17,6 +17,14 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import Vista.VistaPropietarios;
+import Vista.VistaRegistoTrab;
+import Vista.VistaRegistroP;
+import Vista.VistaRegistroResid;
+import Vista.VistaResS;
+import Vista.VistaTraRes;
+import Vista.VistaTrab;
+import Vista.VistaZonas;
 
 /**
  *
@@ -26,11 +34,26 @@ public class ingreso  implements ActionListener {
     private vistaingreso Vingre;
     private VistaBase VistaBase;
     private conexion con;
+     private VistaPropietarios vistapro;
+    private VistaRegistroP vistarp;
+    private VistaResS vistars;
+    private VistaRegistroResid vistarr;
+    private VistaTrab vistatrab;
+    private VistaRegistoTrab vistart;
+    private VistaZonas vistazona;
+    private VistaTraRes vistatr;
     
-    
-    public ingreso(vistaingreso Vingre,VistaBase VistaBase,conexion con){
+    public ingreso(vistaingreso Vingre,VistaBase VistaBase,conexion con,VistaBase vistabase,VistaPropietarios vistapro,VistaRegistroP vistarp, VistaResS vistars,VistaRegistroResid vistarr,VistaTrab vistatrab,VistaRegistoTrab vistart,VistaZonas vistazona,VistaTraRes vistatr){
     this.Vingre=Vingre;
     this.VistaBase=VistaBase;
+     this.vistapro=vistapro;
+    this.vistarp=vistarp;
+    this.vistars=vistars;
+    this.vistarr=vistarr;
+    this.vistatrab=vistatrab;
+    this.vistart=vistart;
+    this.vistazona=vistazona;
+    this.vistatr=vistatr;
     this.con=con;
     this.Vingre.jButton1.addActionListener(this);
     
@@ -49,6 +72,7 @@ public class ingreso  implements ActionListener {
                 while(rs.next()){
             if(rs.getString("tipo").equals("admin")){   
             if(rs.getString("clave").equals(Vingre.jPasswordField1.getText())){
+                Base bd=new Base(VistaBase,vistapro, vistarp, vistars, vistarr,vistatrab, vistart, vistazona, vistatr);
                 Vingre.setVisible(false);
                 VistaBase.setVisible(true);
             } 
