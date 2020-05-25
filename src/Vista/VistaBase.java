@@ -173,10 +173,15 @@ public class VistaBase extends javax.swing.JFrame {
         });
         Propietario.add(actures);
 
-        propietarios.setText("propietarios");
+        propietarios.setText("Visualizar Propietarios");
+        propietarios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                propietariosActionPerformed(evt);
+            }
+        });
         Propietario.add(propietarios);
 
-        registropro.setText("jMenuItem2");
+        registropro.setText("Registro Porpietarios");
         Propietario.add(registropro);
 
         jMenuBar1.add(Propietario);
@@ -231,6 +236,10 @@ public class VistaBase extends javax.swing.JFrame {
     private void acturesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acturesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_acturesActionPerformed
+
+    private void propietariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_propietariosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_propietariosActionPerformed
 
     /**
      * @param args the command line arguments
