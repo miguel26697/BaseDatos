@@ -63,9 +63,13 @@ public class Base  implements ActionListener {
          vistabase.setVisible(false);
         vistapro.setVisible(true);
         }
-        if(x.getSource()==vistabase.registropro){
-        vistabase.setVisible(false);
-        vistarp.setVisible(true);
+        if (x.getSource() == vistabase.registropro) {
+            vistabase.setVisible(false);
+            vistarp.setVisible(true);
+            if (conta == 1) {
+                RegistroProp rp = new RegistroProp(vistabase, vistarp, con);
+                conta++;
+            }
         }
         if(x.getSource()==vistabase.residentes){
         vistabase.setVisible(false);
