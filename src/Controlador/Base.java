@@ -31,6 +31,7 @@ public class Base  implements ActionListener {
     private VistaZonas vistazona;
     private VistaTraRes vistatr;
     private conexion con;
+    private int conta;
     
     public Base(VistaBase vistabase,VistaPropietarios vistapro,VistaRegistroP vistarp, VistaResS vistars,VistaRegistroResid vistarr,VistaTrab vistatrab,VistaRegistoTrab vistart,VistaZonas vistazona,VistaTraRes vistatr,conexion con){
     this.vistabase=vistabase;
@@ -43,6 +44,7 @@ public class Base  implements ActionListener {
     this.vistazona=vistazona;
     this.vistatr=vistatr;
     this.con=con;
+    this.conta=1;
     this.vistabase.propietario.addActionListener(this);
     this.vistabase.registropro.addActionListener(this);
     this.vistabase.registroresi.addActionListener(this);
@@ -55,6 +57,7 @@ public class Base  implements ActionListener {
     
     @Override
     public void actionPerformed(ActionEvent x) {
+        
         if(x.getSource()== vistabase.propietario){
           
          vistabase.setVisible(false);
@@ -69,9 +72,12 @@ public class Base  implements ActionListener {
         vistars.setVisible(true);
         }
         if(x.getSource()==vistabase.registroresi){
-        RegistoResidente rg=new RegistoResidente(vistabase,con,vistabase,vistapro, vistarp,  vistars, vistarr,vistatrab,vistart,vistazona,vistatr);
-        vistabase.setVisible(false);
+            vistabase.setVisible(false);
         vistarr.setVisible(true);
+       if(conta==1){
+         RegistoResidente rg=new RegistoResidente(vistabase,con,vistabase,vistapro, vistarp,  vistars, vistarr,vistatrab,vistart,vistazona,vistatr);
+         this.conta++;
+       }
         }
         if(x.getSource()==vistabase.trabajadores){
         vistabase.setVisible(false);

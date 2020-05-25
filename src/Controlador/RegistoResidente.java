@@ -55,29 +55,36 @@ public class RegistoResidente implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
       if(e.getSource()== vistarr.jButton2){
-      try{
       String id= vistarr.jTextField1.getText();
       String nombre=vistarr.jTextField2.getText();
       String apellidos=vistarr.jTextField3.getText();
       String telefono =vistarr.jTextField4.getText();
       String id_apto=vistarr.jTextField6.getText();
       PreparedStatement ps;
+      try{
+      
       if(!id.equals(null) && !nombre.equals(null) && !apellidos.equals(null) && !telefono.equals(null) && !id_apto.equals(null)){
       ps=con.conexion().prepareStatement("insert into residentes(id_residente,nombre,apellidos,telefono,id_apto)values('"+id+"','"+nombre+"','"+apellidos+"','"+telefono+"','"+id_apto+"')");
       ps.executeUpdate();
       JOptionPane.showMessageDialog(null, "Dato Registrado Correctamente");
+       vistarr.jTextField1.setText("");
+                vistarr.jTextField2.setText("");
+                vistarr.jTextField3.setText("");
+                vistarr.jTextField4.setText("");
+                vistarr.jTextField6.setText("");
       }else{
       JOptionPane.showMessageDialog(null, "Campos vacios");
       
       }
       }catch(Exception x){
+            
      JOptionPane.showMessageDialog(null, "Datos erroneos Dato no registrado");
       }
      
       }
-        if(e.getSource()== vistarr.jButton1){
-          System.out.println("hola");
-        Base bd=new Base(VistaBase ,vistapro,vistarp,  vistars, vistarr, vistatrab, vistart,vistazona,vistatr, con);
+        if(e.getSource()== vistarr.jButton1){      
+
+              
                 vistarr.setVisible(false);
                 VistaBase.setVisible(true);
       
