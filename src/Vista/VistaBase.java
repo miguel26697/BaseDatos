@@ -39,14 +39,14 @@ public class VistaBase extends javax.swing.JFrame {
         zonas = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         Propietario = new javax.swing.JMenu();
-        actpro = new javax.swing.JMenuItem();
-        actures = new javax.swing.JMenuItem();
         propietarios = new javax.swing.JMenuItem();
         registropro = new javax.swing.JMenuItem();
-        registroresi = new javax.swing.JMenuItem();
+        actpro = new javax.swing.JMenuItem();
         residentes = new javax.swing.JMenuItem();
-        registrotrab = new javax.swing.JMenuItem();
+        registroresi = new javax.swing.JMenuItem();
+        actures = new javax.swing.JMenuItem();
         trabajadores = new javax.swing.JMenuItem();
+        registrotrab = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         jMenu3.setText("jMenu3");
@@ -114,22 +114,6 @@ public class VistaBase extends javax.swing.JFrame {
 
         Propietario.setText("File");
 
-        actpro.setText("Actualizar o eliminar un  propietario");
-        actpro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                actproActionPerformed(evt);
-            }
-        });
-        Propietario.add(actpro);
-
-        actures.setText("Actualizar o eliminar un  residente");
-        actures.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                acturesActionPerformed(evt);
-            }
-        });
-        Propietario.add(actures);
-
         propietarios.setText("Visualizar Propietarios");
         propietarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,11 +125,30 @@ public class VistaBase extends javax.swing.JFrame {
         registropro.setText("Registro Porpietarios");
         Propietario.add(registropro);
 
-        registroresi.setText("Registro Residentes");
-        Propietario.add(registroresi);
+        actpro.setText("Actualizar o eliminar un  propietario");
+        actpro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                actproActionPerformed(evt);
+            }
+        });
+        Propietario.add(actpro);
 
         residentes.setText("Visualizar Residentes");
         Propietario.add(residentes);
+
+        registroresi.setText("Registro Residentes");
+        Propietario.add(registroresi);
+
+        actures.setText("Actualizar o eliminar un  residente");
+        actures.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                acturesActionPerformed(evt);
+            }
+        });
+        Propietario.add(actures);
+
+        trabajadores.setText("Visualizar Trabajadores");
+        Propietario.add(trabajadores);
 
         registrotrab.setText("Registro Trabajador");
         registrotrab.addActionListener(new java.awt.event.ActionListener() {
@@ -154,9 +157,6 @@ public class VistaBase extends javax.swing.JFrame {
             }
         });
         Propietario.add(registrotrab);
-
-        trabajadores.setText("Visualizar Trabajadores");
-        Propietario.add(trabajadores);
 
         jMenuBar1.add(Propietario);
 
