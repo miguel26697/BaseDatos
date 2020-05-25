@@ -3,14 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Jairo/Documents/conjunto1/BaseDatos/src/Vista/VistaBase.java</file>
-            <file>file:/C:/Users/Jairo/Documents/conjunto1/BaseDatos/src/Controlador/ingreso.java</file>
-            <file>file:/C:/Users/Jairo/Documents/conjunto1/BaseDatos/src/Controlador/Base.java</file>
-            <file>file:/C:/Users/Jairo/Documents/conjunto1/BaseDatos/src/Vista/VistaResS.java</file>
-            <file>file:/C:/Users/Jairo/Documents/conjunto1/BaseDatos/src/Vista/VistaRegistroP.java</file>
-            <file>file:/C:/Users/Jairo/Documents/conjunto1/BaseDatos/src/Vista/VistaPropietarios.java</file>
-            <file>file:/C:/Users/Jairo/Documents/conjunto1/BaseDatos/src/Controlador/Controlador.java</file>
-            <file>file:/C:/Users/Jairo/Documents/conjunto1/BaseDatos/src/conjunto/Conjunto.java</file>
+            <file>file:/C:/Users/migue/OneDrive/Documentos/UNIVERSIDAD/Bases%20de%20datos/ProyectoFinal/BaseDatos/src/Controlador/ingreso.java</file>
+            <file>file:/C:/Users/migue/OneDrive/Documentos/UNIVERSIDAD/Bases%20de%20datos/ProyectoFinal/BaseDatos/src/conjunto/conexion.java</file>
+            <file>file:/C:/Users/migue/OneDrive/Documentos/UNIVERSIDAD/Bases%20de%20datos/ProyectoFinal/BaseDatos/src/Controlador/Base.java</file>
+            <file>file:/C:/Users/migue/OneDrive/Documentos/UNIVERSIDAD/Bases%20de%20datos/ProyectoFinal/BaseDatos/src/Vista/Vistaconexion.java</file>
+            <file>file:/C:/Users/migue/OneDrive/Documentos/UNIVERSIDAD/Bases%20de%20datos/ProyectoFinal/BaseDatos/src/Vista/VistaRegistoTrab.java</file>
+            <file>file:/C:/Users/migue/OneDrive/Documentos/UNIVERSIDAD/Bases%20de%20datos/ProyectoFinal/BaseDatos/src/Modelo/Modelo.java</file>
+            <file>file:/C:/Users/migue/OneDrive/Documentos/UNIVERSIDAD/Bases%20de%20datos/ProyectoFinal/BaseDatos/src/Vista/VistaBase.java</file>
+            <file>file:/C:/Users/migue/OneDrive/Documentos/UNIVERSIDAD/Bases%20de%20datos/ProyectoFinal/BaseDatos/src/Controlador/Controlador.java</file>
+            <file>file:/C:/Users/migue/OneDrive/Documentos/UNIVERSIDAD/Bases%20de%20datos/ProyectoFinal/BaseDatos/src/conjunto/Conjunto.java</file>
         </group>
     </open-files>
 </project-private>
