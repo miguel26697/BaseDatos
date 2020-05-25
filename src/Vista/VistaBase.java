@@ -35,18 +35,18 @@ public class VistaBase extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        residentes = new javax.swing.JButton();
-        registroresi = new javax.swing.JButton();
         resitrab = new javax.swing.JButton();
         zonas = new javax.swing.JButton();
-        trabajadores = new javax.swing.JButton();
-        registrotrab = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         Propietario = new javax.swing.JMenu();
         actpro = new javax.swing.JMenuItem();
         actures = new javax.swing.JMenuItem();
         propietarios = new javax.swing.JMenuItem();
         registropro = new javax.swing.JMenuItem();
+        registroresi = new javax.swing.JMenuItem();
+        residentes = new javax.swing.JMenuItem();
+        registrotrab = new javax.swing.JMenuItem();
+        trabajadores = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         jMenu3.setText("jMenu3");
@@ -64,20 +64,6 @@ public class VistaBase extends javax.swing.JFrame {
 
         jLabel1.setText("Miguel companys asociados J.S.");
 
-        residentes.setText("Residiarios");
-        residentes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                residentesActionPerformed(evt);
-            }
-        });
-
-        registroresi.setText("Registro residiarios");
-        registroresi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                registroresiActionPerformed(evt);
-            }
-        });
-
         resitrab.setText("Residiarios/Trabajdores");
         resitrab.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,20 +78,6 @@ public class VistaBase extends javax.swing.JFrame {
             }
         });
 
-        trabajadores.setText("Trabajdores");
-        trabajadores.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                trabajadoresActionPerformed(evt);
-            }
-        });
-
-        registrotrab.setText("Registro Trabajadores");
-        registrotrab.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                registrotrabActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -117,16 +89,9 @@ public class VistaBase extends javax.swing.JFrame {
                         .addComponent(jLabel2)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(resitrab, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(trabajadores, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(residentes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(resitrab)
                         .addGap(43, 43, 43)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(registroresi, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(zonas, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(registrotrab, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(zonas, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(286, 286, 286))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(113, 113, 113)
@@ -140,15 +105,7 @@ public class VistaBase extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(13, 13, 13)
                 .addComponent(jLabel2)
-                .addGap(68, 68, 68)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(residentes, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(registroresi, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(trabajadores, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(registrotrab, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
+                .addGap(187, 187, 187)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(zonas, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(resitrab, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -184,6 +141,23 @@ public class VistaBase extends javax.swing.JFrame {
         registropro.setText("Registro Porpietarios");
         Propietario.add(registropro);
 
+        registroresi.setText("Registro Residentes");
+        Propietario.add(registroresi);
+
+        residentes.setText("Visualizar Residentes");
+        Propietario.add(residentes);
+
+        registrotrab.setText("Registro Trabajador");
+        registrotrab.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registrotrabActionPerformed(evt);
+            }
+        });
+        Propietario.add(registrotrab);
+
+        trabajadores.setText("Visualizar Trabajadores");
+        Propietario.add(trabajadores);
+
         jMenuBar1.add(Propietario);
 
         jMenu2.setText("Edit");
@@ -205,14 +179,6 @@ public class VistaBase extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void residentesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_residentesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_residentesActionPerformed
-
-    private void registroresiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registroresiActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_registroresiActionPerformed
-
     private void resitrabActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resitrabActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_resitrabActionPerformed
@@ -220,14 +186,6 @@ public class VistaBase extends javax.swing.JFrame {
     private void zonasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zonasActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_zonasActionPerformed
-
-    private void trabajadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_trabajadoresActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_trabajadoresActionPerformed
-
-    private void registrotrabActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrotrabActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_registrotrabActionPerformed
 
     private void actproActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actproActionPerformed
         // TODO add your handling code here:
@@ -240,6 +198,10 @@ public class VistaBase extends javax.swing.JFrame {
     private void propietariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_propietariosActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_propietariosActionPerformed
+
+    private void registrotrabActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrotrabActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_registrotrabActionPerformed
 
     /**
      * @param args the command line arguments
@@ -292,11 +254,11 @@ public class VistaBase extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     public javax.swing.JMenuItem propietarios;
     public javax.swing.JMenuItem registropro;
-    public javax.swing.JButton registroresi;
-    public javax.swing.JButton registrotrab;
-    public javax.swing.JButton residentes;
+    public javax.swing.JMenuItem registroresi;
+    public javax.swing.JMenuItem registrotrab;
+    public javax.swing.JMenuItem residentes;
     public javax.swing.JButton resitrab;
-    public javax.swing.JButton trabajadores;
+    public javax.swing.JMenuItem trabajadores;
     public javax.swing.JButton zonas;
     // End of variables declaration//GEN-END:variables
 }
