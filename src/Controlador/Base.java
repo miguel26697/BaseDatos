@@ -57,6 +57,35 @@ public class Base  implements ActionListener {
          vistabase.setVisible(false);
         vistapro.setVisible(true);
         }
+        if(x.getSource()==vistabase.registropro){
+        vistabase.setVisible(false);
+        vistarp.setVisible(true);
+        }
+        if(x.getSource()==vistabase.residentes){
+        vistabase.setVisible(false);
+        vistars.setVisible(true);
+        }
+        if(x.getSource()==vistabase.registroresi){
+        vistabase.setVisible(false);
+        vistarr.setVisible(true);
+        }
+        if(x.getSource()==vistabase.trabajadores){
+        vistabase.setVisible(false);
+        vistatrab.setVisible(true);
+        }
+        if(x.getSource()==vistabase.registrotrab){
+        vistabase.setVisible(false);
+        vistart.setVisible(true);
+        }
+        if(x.getSource()== vistabase.resitrab){
+            vistabase.setVisible(false);
+            vistatr.setVisible(true);
+        }
+         if(x.getSource()== vistabase.zonas){
+            vistabase.setVisible(false);
+            vistazona.setVisible(true);
+        }
+        
     }
     
 }
