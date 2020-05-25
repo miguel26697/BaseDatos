@@ -25,7 +25,8 @@ import Vista.VistaResS;
 import Vista.VistaTraRes;
 import Vista.VistaTrab;
 import Vista.VistaZonas;
-
+import Vista.VistaActPro;
+import Vista.VistaActRes;
 /**
  *
  * @author Jairo
@@ -42,8 +43,10 @@ public class ingreso  implements ActionListener {
     private VistaRegistoTrab vistart;
     private VistaZonas vistazona;
     private VistaTraRes vistatr;
+    private VistaActPro vistaactpro;
+    private VistaActRes vistaactres;
     
-    public ingreso(vistaingreso Vingre,VistaBase VistaBase,conexion con,VistaBase vistabase,VistaPropietarios vistapro,VistaRegistroP vistarp, VistaResS vistars,VistaRegistroResid vistarr,VistaTrab vistatrab,VistaRegistoTrab vistart,VistaZonas vistazona,VistaTraRes vistatr){
+    public ingreso(vistaingreso Vingre,VistaBase VistaBase,conexion con,VistaBase vistabase,VistaPropietarios vistapro,VistaRegistroP vistarp, VistaResS vistars,VistaRegistroResid vistarr,VistaTrab vistatrab,VistaRegistoTrab vistart,VistaZonas vistazona,VistaTraRes vistatr,VistaActPro vistaactpro,VistaActRes vistaactres){
     this.Vingre=Vingre;
     this.VistaBase=VistaBase;
      this.vistapro=vistapro;
@@ -55,6 +58,8 @@ public class ingreso  implements ActionListener {
     this.vistazona=vistazona;
     this.vistatr=vistatr;
     this.con=con;
+    this.vistaactres=vistaactres;
+    this.vistaactpro=vistaactpro;
     this.Vingre.jButton1.addActionListener(this);
     
     }
@@ -72,7 +77,7 @@ public class ingreso  implements ActionListener {
                 while(rs.next()){
             if(rs.getString("tipo").equals("admin")){   
             if(rs.getString("clave").equals(Vingre.jPasswordField1.getText())){
-                Base bd=new Base(VistaBase,vistapro, vistarp, vistars, vistarr,vistatrab, vistart, vistazona, vistatr,con);
+                Base bd=new Base(VistaBase,vistapro, vistarp, vistars, vistarr,vistatrab, vistart, vistazona, vistatr,con,vistaactpro,vistaactres);
                 Vingre.setVisible(false);
                 VistaBase.setVisible(true);
             } 

@@ -18,6 +18,8 @@ import Vista.VistaResS;
 import Vista.VistaTraRes;
 import Vista.VistaTrab;
 import Vista.VistaZonas;
+import Vista.VistaActPro;
+import Vista.VistaActRes;
 import javax.swing.JOptionPane;
 
 /**
@@ -45,7 +47,9 @@ public class Conjunto {
       VistaRegistoTrab vistart =new VistaRegistoTrab();
       VistaZonas vistazona=new VistaZonas();
       VistaTraRes vistatr =new VistaTraRes();
-      ingreso conotra=new ingreso(Vingre,VistaBase,con,vistabase,vistapro, vistarp, vistars, vistarr,vistatrab, vistart, vistazona, vistatr);
+      VistaActPro vistaactpro =new VistaActPro();
+      VistaActRes vistaactres =new VistaActRes();
+      ingreso conotra=new ingreso(Vingre,VistaBase,con,vistabase,vistapro, vistarp, vistars, vistarr,vistatrab, vistart, vistazona, vistatr,vistaactpro, vistaactres);
      
         
     }
