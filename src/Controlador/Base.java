@@ -69,7 +69,7 @@ public class Base  implements ActionListener {
         vistars.setVisible(true);
         }
         if(x.getSource()==vistabase.registroresi){
-        RegistoResidente rg=new RegistoResidente(vistarr,con);
+        RegistoResidente rg=new RegistoResidente(vistabase,con,vistabase,vistapro, vistarp,  vistars, vistarr,vistatrab,vistart,vistazona,vistatr);
         vistabase.setVisible(false);
         vistarr.setVisible(true);
         }
