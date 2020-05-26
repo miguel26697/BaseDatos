@@ -32,6 +32,7 @@ import Vista.VistaRegistroturno;
 import Vista.VistaApar;
 import Vista.VistaRegistroUsozo;
 import Vista.VistaRegistroZona;
+import Vista.VistaActTrab;
 /**
  *
  * @author Jairo
@@ -55,14 +56,16 @@ public class ingreso  implements ActionListener {
     private VistaTipoem vistaem;
     private VistaRegistroturno vistare;
     private VistaRegistroUsozo vistaz;
+    private VistaActTrab vistaacttrab;
     
     public ingreso(vistaingreso Vingre,VistaBase VistaBase,conexion con,VistaBase vistabase,VistaPropietarios vistapro,VistaRegistroP vistarp, 
             VistaResS vistars,VistaRegistroResid vistarr,VistaTrab vistatrab,VistaRegistoTrab vistart,VistaZonas vistazona,VistaTraRes vistatr,
             VistaActPro vistaactpro,VistaActRes vistaactres,VistaTipoem vistaem,VistaRegistroturno vistare,VistaApar vistaapr,VistaRegistroZona vistarz,
-            VistaRegistroUsozo vistaz){
+            VistaRegistroUsozo vistaz,VistaActTrab vistaacttrab){
     this.vistaz=vistaz;
     this.vistaapr= vistaapr;
     this.vistarz=vistarz;
+    this.vistaacttrab=vistaacttrab;
         this.Vingre=Vingre;
     this.VistaBase=VistaBase;
      this.vistapro=vistapro;
@@ -95,7 +98,7 @@ public class ingreso  implements ActionListener {
                 while(rs.next()){
             if(rs.getString("tipo").equals("admin")){   
             if(rs.getString("clave").equals(Vingre.jPasswordField1.getText())){
-                Base bd=new Base(VistaBase,vistapro, vistarp, vistars, vistarr,vistatrab, vistart, vistazona, vistatr,con,vistaactpro,vistaactres,vistaem,vistare);
+                Base bd=new Base(VistaBase,vistapro, vistarp, vistars, vistarr,vistatrab, vistart, vistazona, vistatr,con,vistaactpro,vistaactres,vistaem,vistare,vistaacttrab);
                 Vingre.setVisible(false);
                 VistaBase.setVisible(true);
             } 

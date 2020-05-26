@@ -26,6 +26,7 @@ import Vista.VistaRegistroturno;
 import Vista.VistaApar;
 import Vista.VistaRegistroZona;
 import Vista.VistaRegistroUsozo;
+import Vista.VistaActTrab;
 
 /**
  *
@@ -58,7 +59,8 @@ public class Conjunto {
       VistaActRes vistaactres =new VistaActRes();
       VistaTipoem vistaem =new VistaTipoem();
       VistaRegistroturno vistare=new VistaRegistroturno();
-      ingreso conotra=new ingreso(Vingre,VistaBase,con,vistabase,vistapro, vistarp, vistars, vistarr,vistatrab, vistart, vistazona, vistatr,vistaactpro, vistaactres,vistaem,vistare,vistaapr ,vistarz,vistaz);
+      VistaActTrab vistaacttrab =new VistaActTrab();
+      ingreso conotra=new ingreso(Vingre,VistaBase,con,vistabase,vistapro, vistarp, vistars, vistarr,vistatrab, vistart, vistazona, vistatr,vistaactpro, vistaactres,vistaem,vistare,vistaapr ,vistarz,vistaz,vistaacttrab);
      
         
     }

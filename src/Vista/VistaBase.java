@@ -49,7 +49,7 @@ public class VistaBase extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         trabajadores = new javax.swing.JMenuItem();
         registrotrab = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        acttrab = new javax.swing.JMenuItem();
         tipoem = new javax.swing.JMenuItem();
         tipoturn = new javax.swing.JMenuItem();
 
@@ -170,8 +170,8 @@ public class VistaBase extends javax.swing.JFrame {
         });
         jMenu2.add(registrotrab);
 
-        jMenuItem2.setText("Actualizar o eliminar un trabajador");
-        jMenu2.add(jMenuItem2);
+        acttrab.setText("Actualizar o eliminar un trabajador");
+        jMenu2.add(acttrab);
 
         tipoem.setText("Registrar un tipo de empleado");
         jMenu2.add(tipoem);
@@ -259,6 +259,7 @@ public class VistaBase extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JMenu Propietario;
     public javax.swing.JMenuItem actpro;
+    public javax.swing.JMenuItem acttrab;
     public javax.swing.JMenuItem actures;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JLabel jLabel1;
@@ -270,7 +271,6 @@ public class VistaBase extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
     public javax.swing.JMenuItem propietarios;
     public javax.swing.JMenuItem registropro;

@@ -27,13 +27,16 @@ public class RegistroUsozo implements ActionListener {
     private VistaApar VistaBase;
     private VistaRegistroUsozo vistarp;
     private conexion con;
+    private int id_uso;
 
     public RegistroUsozo(VistaApar VistaBase, VistaRegistroUsozo vistarp, conexion con) {
         this.vistarp = vistarp;
         this.VistaBase = VistaBase;
         this.con = con;
+        this.id_uso=0;
         this.vistarp.jButton1.addActionListener(this);
         this.vistarp.jButton2.addActionListener(this);
+  
     }
 
     @Override
@@ -42,6 +45,7 @@ public class RegistroUsozo implements ActionListener {
         if (e.getSource() == vistarp.jButton1) {
             if (vistarp.jTextField1.getText().length() != 0 && vistarp.jTextField2.getText().length() != 0 && vistarp.jTextField3.getText().length() != 0 && vistarp.jTextField4.getText().length() != 0 && vistarp.jTextField5.getText().length() != 0) {
                 try {
+                    vistarp.jTextField1.setText(Integer.toOctalString(id_uso));
                     int id_uso = Integer.parseInt(vistarp.jTextField1.getText());
                     String fecha = vistarp.jTextField2.getText();
                     String hora = vistarp.jTextField3.getText();
@@ -52,6 +56,7 @@ public class RegistroUsozo implements ActionListener {
                         ps = con.conexion().prepareStatement("insert into usozona(id_uso,fecha,dia,id_residente,id_zona)values('" + Integer.toString(id_uso) + "','" + fecha + "','"
                                 + hora + "','" + Integer.toString(id_residente) + "','" + Integer.toString(id_zona) + "')");
                         ps.executeUpdate();
+                        this.id_uso++;
                         JOptionPane.showMessageDialog(null, "Registro Almacenado correctamete");
                         vistarp.jTextField1.setText(null);
                         vistarp.jTextField2.setText(null);

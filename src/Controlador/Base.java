@@ -21,6 +21,7 @@ import Vista.VistaRegistoTrab;
 import Vista.VistaTipoem;
 import conjunto.conexion;
 import Vista.VistaRegistroturno;
+import Vista.VistaActTrab;
 /**
  *
  * @author Jairo
@@ -40,9 +41,10 @@ public class Base  implements ActionListener {
     private VistaActRes vistaactres;
     private VistaTipoem vitaem;
     private VistaRegistroturno vistare;
-    private int conta,conta1,conta2,conta3,conta4,conta5,conta6,conta7;
+    private VistaActTrab vistaacttrab;
+    private int conta,conta1,conta2,conta3,conta4,conta5,conta6,conta7,conta8;
     
-    public Base(VistaBase vistabase,VistaPropietarios vistapro,VistaRegistroP vistarp, VistaResS vistars,VistaRegistroResid vistarr,VistaTrab vistatrab,VistaRegistoTrab vistart,VistaZonas vistazona,VistaTraRes vistatr,conexion con,VistaActPro vistaactpro,VistaActRes vistaactres,VistaTipoem vitaem,VistaRegistroturno vistare){
+    public Base(VistaBase vistabase,VistaPropietarios vistapro,VistaRegistroP vistarp, VistaResS vistars,VistaRegistroResid vistarr,VistaTrab vistatrab,VistaRegistoTrab vistart,VistaZonas vistazona,VistaTraRes vistatr,conexion con,VistaActPro vistaactpro,VistaActRes vistaactres,VistaTipoem vitaem,VistaRegistroturno vistare,VistaActTrab vistaacttrab){
     this.vistabase=vistabase;
     this.vistapro=vistapro;
     this.vistarp=vistarp;
@@ -54,6 +56,7 @@ public class Base  implements ActionListener {
     this.vistatr=vistatr;
     this.vitaem=vitaem;
     this.vistare=vistare;
+    this.vistaacttrab=vistaacttrab;
     this.con=con;
     this.conta=1;
     this.conta1=1;
@@ -63,8 +66,10 @@ public class Base  implements ActionListener {
     this.conta5=1;
     this.conta6=1;
     this.conta7=1;
+    this.conta8=1;
     this.vistaactpro=vistaactpro;
     this.vistaactres=vistaactres;
+    this.vistabase.acttrab.addActionListener(this);
     this.vistabase.actpro.addActionListener(this);
     this.vistabase.tipoem.addActionListener(this);
     this.vistabase.tipoturn.addActionListener(this);
@@ -81,6 +86,15 @@ public class Base  implements ActionListener {
     
     @Override
     public void actionPerformed(ActionEvent x) {
+        if(x.getSource()== vistabase.acttrab){
+        vistabase.setVisible(false);
+        vistaacttrab.setVisible(true);
+        if(conta8==1){
+        acttrab act =new acttrab(vistabase,vistaacttrab,con);
+            conta8++;
+        }
+        }
+        
         if(x.getSource()== vistabase.tipoturn){
          vistabase.setVisible(false);
         vistare.setVisible(true);
