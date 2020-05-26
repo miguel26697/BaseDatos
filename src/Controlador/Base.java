@@ -17,7 +17,10 @@ import Vista.VistaActRes;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import Vista.VistaActPro;
+import Vista.VistaRegistoTrab;
+import Vista.VistaTipoem;
 import conjunto.conexion;
+import Vista.VistaRegistroturno;
 /**
  *
  * @author Jairo
@@ -35,9 +38,11 @@ public class Base  implements ActionListener {
     private conexion con;
     private VistaActPro vistaactpro;
     private VistaActRes vistaactres;
-    private int conta,conta1,conta2,conta3;
+    private VistaTipoem vitaem;
+    private VistaRegistroturno vistare;
+    private int conta,conta1,conta2,conta3,conta4,conta5,conta6,conta7;
     
-    public Base(VistaBase vistabase,VistaPropietarios vistapro,VistaRegistroP vistarp, VistaResS vistars,VistaRegistroResid vistarr,VistaTrab vistatrab,VistaRegistoTrab vistart,VistaZonas vistazona,VistaTraRes vistatr,conexion con,VistaActPro vistaactpro,VistaActRes vistaactres){
+    public Base(VistaBase vistabase,VistaPropietarios vistapro,VistaRegistroP vistarp, VistaResS vistars,VistaRegistroResid vistarr,VistaTrab vistatrab,VistaRegistoTrab vistart,VistaZonas vistazona,VistaTraRes vistatr,conexion con,VistaActPro vistaactpro,VistaActRes vistaactres,VistaTipoem vitaem,VistaRegistroturno vistare){
     this.vistabase=vistabase;
     this.vistapro=vistapro;
     this.vistarp=vistarp;
@@ -47,14 +52,22 @@ public class Base  implements ActionListener {
     this.vistart=vistart;
     this.vistazona=vistazona;
     this.vistatr=vistatr;
+    this.vitaem=vitaem;
+    this.vistare=vistare;
     this.con=con;
     this.conta=1;
     this.conta1=1;
     this.conta2=1;
     this.conta3=1;
+    this.conta4=1;
+    this.conta5=1;
+    this.conta6=1;
+    this.conta7=1;
     this.vistaactpro=vistaactpro;
     this.vistaactres=vistaactres;
     this.vistabase.actpro.addActionListener(this);
+    this.vistabase.tipoem.addActionListener(this);
+    this.vistabase.tipoturn.addActionListener(this);
     this.vistabase.actures.addActionListener(this);
     this.vistabase.propietarios.addActionListener(this);
     this.vistabase.registropro.addActionListener(this);
@@ -68,12 +81,34 @@ public class Base  implements ActionListener {
     
     @Override
     public void actionPerformed(ActionEvent x) {
-        
-        if(x.getSource()== vistabase.propietarios){
-          
+        if(x.getSource()== vistabase.tipoturn){
          vistabase.setVisible(false);
-        vistapro.setVisible(true);
+        vistare.setVisible(true);
+        if(conta7==1){
+        RegistroTurno vy =new RegistroTurno (vistabase,vistare,con);
+        conta7++;
         }
+        
+        }
+        if(x.getSource()== vistabase.propietarios){  
+        vistabase.setVisible(false);
+        vistapro.setVisible(true);
+        if(conta5==1){
+        VPropietarios vp =new VPropietarios(vistapro,vistabase,con);
+        conta5++;
+        }
+        }
+        if(x.getSource()== vistabase.tipoem){
+        vistabase.setVisible(false);
+        vitaem.setVisible(true);
+        if(conta6==1){
+        RegistroTipotra ve =new RegistroTipotra (vistabase,vitaem,con);
+        conta6++;
+        }
+        }
+        
+        
+        
         if (x.getSource() == vistabase.registropro) {
             vistabase.setVisible(false);
             vistarp.setVisible(true);
@@ -120,6 +155,10 @@ public class Base  implements ActionListener {
         if(x.getSource()==vistabase.registrotrab){
         vistabase.setVisible(false);
         vistart.setVisible(true);
+        if(conta4==1){
+            RegistroTrabajador res=new RegistroTrabajador(vistabase,vistart,con);
+            this.conta4++;
+        }
         }
         if(x.getSource()== vistabase.resitrab){
             vistabase.setVisible(false);

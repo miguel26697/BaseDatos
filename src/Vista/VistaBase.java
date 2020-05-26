@@ -38,16 +38,20 @@ public class VistaBase extends javax.swing.JFrame {
         resitrab = new javax.swing.JButton();
         zonas = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
-        Propietario = new javax.swing.JMenu();
+        jMenu1 = new javax.swing.JMenu();
         propietarios = new javax.swing.JMenuItem();
         registropro = new javax.swing.JMenuItem();
         actpro = new javax.swing.JMenuItem();
+        Propietario = new javax.swing.JMenu();
         residentes = new javax.swing.JMenuItem();
         registroresi = new javax.swing.JMenuItem();
         actures = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
         trabajadores = new javax.swing.JMenuItem();
         registrotrab = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        tipoem = new javax.swing.JMenuItem();
+        tipoturn = new javax.swing.JMenuItem();
 
         jMenu3.setText("jMenu3");
 
@@ -90,29 +94,29 @@ public class VistaBase extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(resitrab)
-                        .addGap(43, 43, 43)
+                        .addGap(130, 130, 130)
                         .addComponent(zonas, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(286, 286, 286))))
+                        .addGap(199, 199, 199))))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(113, 113, 113)
+                .addGap(161, 161, 161)
                 .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(13, 13, 13)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addGap(187, 187, 187)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(zonas, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(resitrab, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(resitrab, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(zonas, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
-        Propietario.setText("File");
+        jMenu1.setText("Propietarios");
 
         propietarios.setText("Visualizar Propietarios");
         propietarios.addActionListener(new java.awt.event.ActionListener() {
@@ -120,10 +124,10 @@ public class VistaBase extends javax.swing.JFrame {
                 propietariosActionPerformed(evt);
             }
         });
-        Propietario.add(propietarios);
+        jMenu1.add(propietarios);
 
         registropro.setText("Registro Porpietarios");
-        Propietario.add(registropro);
+        jMenu1.add(registropro);
 
         actpro.setText("Actualizar o eliminar un  propietario");
         actpro.addActionListener(new java.awt.event.ActionListener() {
@@ -131,7 +135,11 @@ public class VistaBase extends javax.swing.JFrame {
                 actproActionPerformed(evt);
             }
         });
-        Propietario.add(actpro);
+        jMenu1.add(actpro);
+
+        jMenuBar1.add(jMenu1);
+
+        Propietario.setText("Residentes");
 
         residentes.setText("Visualizar Residentes");
         Propietario.add(residentes);
@@ -147,8 +155,12 @@ public class VistaBase extends javax.swing.JFrame {
         });
         Propietario.add(actures);
 
+        jMenuBar1.add(Propietario);
+
+        jMenu2.setText("Trabajadores");
+
         trabajadores.setText("Visualizar Trabajadores");
-        Propietario.add(trabajadores);
+        jMenu2.add(trabajadores);
 
         registrotrab.setText("Registro Trabajador");
         registrotrab.addActionListener(new java.awt.event.ActionListener() {
@@ -156,11 +168,17 @@ public class VistaBase extends javax.swing.JFrame {
                 registrotrabActionPerformed(evt);
             }
         });
-        Propietario.add(registrotrab);
+        jMenu2.add(registrotrab);
 
-        jMenuBar1.add(Propietario);
+        jMenuItem2.setText("Actualizar o eliminar un trabajador");
+        jMenu2.add(jMenuItem2);
 
-        jMenu2.setText("Edit");
+        tipoem.setText("Registrar un tipo de empleado");
+        jMenu2.add(tipoem);
+
+        tipoturn.setText("Registrar un tipo de turno");
+        jMenu2.add(tipoturn);
+
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -246,11 +264,13 @@ public class VistaBase extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
     public javax.swing.JMenuItem propietarios;
     public javax.swing.JMenuItem registropro;
@@ -258,6 +278,8 @@ public class VistaBase extends javax.swing.JFrame {
     public javax.swing.JMenuItem registrotrab;
     public javax.swing.JMenuItem residentes;
     public javax.swing.JButton resitrab;
+    public javax.swing.JMenuItem tipoem;
+    public javax.swing.JMenuItem tipoturn;
     public javax.swing.JMenuItem trabajadores;
     public javax.swing.JButton zonas;
     // End of variables declaration//GEN-END:variables

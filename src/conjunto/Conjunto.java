@@ -21,6 +21,11 @@ import Vista.VistaZonas;
 import Vista.VistaActPro;
 import Vista.VistaActRes;
 import javax.swing.JOptionPane;
+import Vista.VistaTipoem;
+import Vista.VistaRegistroturno;
+import Vista.VistaApar;
+import Vista.VistaRegistroZona;
+import Vista.VistaRegistroUsozo;
 
 /**
  *
@@ -34,7 +39,9 @@ public class Conjunto {
     public static void main(String[] args) {
         // TODO code application logic here
     conexion con =new conexion();
-   
+   VistaApar vistaapr = new VistaApar();
+   VistaRegistroUsozo vistaz=new VistaRegistroUsozo();
+   VistaRegistroZona vistarz =new VistaRegistroZona();
       vistaingreso Vingre =new vistaingreso();
       VistaBase VistaBase =new VistaBase();
       Vingre.setVisible(true);
@@ -49,7 +56,9 @@ public class Conjunto {
       VistaTraRes vistatr =new VistaTraRes();
       VistaActPro vistaactpro =new VistaActPro();
       VistaActRes vistaactres =new VistaActRes();
-      ingreso conotra=new ingreso(Vingre,VistaBase,con,vistabase,vistapro, vistarp, vistars, vistarr,vistatrab, vistart, vistazona, vistatr,vistaactpro, vistaactres);
+      VistaTipoem vistaem =new VistaTipoem();
+      VistaRegistroturno vistare=new VistaRegistroturno();
+      ingreso conotra=new ingreso(Vingre,VistaBase,con,vistabase,vistapro, vistarp, vistars, vistarr,vistatrab, vistart, vistazona, vistatr,vistaactpro, vistaactres,vistaem,vistare,vistaapr ,vistarz,vistaz);
      
         
     }

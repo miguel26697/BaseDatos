@@ -37,19 +37,19 @@ foreign key (id_residente) references residentes(id_residente),
 foreign key (id_parqueadero) references parqueadero(bahia)
 );
 
-create table deudores(
-id_deuda varchar(10) primary key,
-saldo integer not null,
-fecha date,
-id_propietario varchar(30),
-foreign key (id_propietario)  references propietarios(id_propietarios)
+create table recibo(
+id_recibo varchar(10) primary key,
+fecha_exp varchar(15),
+fecha_lim varchar(10),
+valor int,
+id_propietarios varchar(10),
+foreign key(id_propietarios) references propietarios(id_propietarios)
 );
+
 create table pago(
-id_pago varchar(10),
-saldo integer not null,
-fecha date,
-id_propietario varchar(30),
-foreign key (id_propietario)  references propietarios(id_propietarios)
+pagor varchar(3),
+id_recibo varchar(10),
+foreign key (id_recibo)  references recibo(id_recibo)
 );
 create table turnos(
 id_turno varchar(10) primary key,
@@ -105,22 +105,27 @@ id_zona varchar(10),
 foreign key (id_zona) references zonas(id_zona),
 foreign key (id_residente) references residentes(id_residente));
 
-create table cliente(
-id varchar(10) primary key,
-nombre varchar(30),
-apellidos varchar(30),
-email varchar(30),
-direccion varchar(30),
-telefono varchar(30)
-);
-select*from cliente;
 
 insert into propietarios values ("1234","jairo","caro","350750");
 insert into usuario values("jairo","1234","admin");
 insert into usuario values("miguel","1234","celador");
+insert into usuario values("johan","1234","Contra");
+insert into apto values("T1A2b","normal","1234");
+insert into apto values("T1A1b","normal","1");
+select * from residentes;
+insert into residentes value("1","miguel","rippe","350750","T1A1b");
 
 
+insert into tipoemp values("1","celador");
+insert into turnos values("1",5000,"nocturno","7","24:00","8:00");
+
+insert into recibo values("01","12/01/2020","12/02/2020",250000,"1234");
+insert into recibo values("02","12/01/2020","12/02/2020",280000,"1");
 
 
+insert into pago values("si","01");
+insert into pago values("si","02");
+
+insert into zonas values("1","Libres");
 
 
