@@ -32,6 +32,7 @@ public class VistaBase extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
         jLabel3 = new javax.swing.JLabel();
+        jMenu5 = new javax.swing.JMenu();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -52,6 +53,12 @@ public class VistaBase extends javax.swing.JFrame {
         acttrab = new javax.swing.JMenuItem();
         tipoem = new javax.swing.JMenuItem();
         tipoturn = new javax.swing.JMenuItem();
+        jMenu6 = new javax.swing.JMenu();
+        regisuser = new javax.swing.JMenuItem();
+        regiscar = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenu7 = new javax.swing.JMenu();
+        visitante = new javax.swing.JMenuItem();
 
         jMenu3.setText("jMenu3");
 
@@ -63,6 +70,8 @@ public class VistaBase extends javax.swing.JFrame {
         jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
 
         jLabel3.setText("jLabel3");
+
+        jMenu5.setText("jMenu5");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -181,13 +190,34 @@ public class VistaBase extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
+        jMenu6.setText("Usuarios");
+
+        regisuser.setText("Registrar un usuario");
+        jMenu6.add(regisuser);
+
+        jMenuBar1.add(jMenu6);
+
+        regiscar.setText("Carros");
+
+        jMenuItem3.setText("Registrar un carro");
+        regiscar.add(jMenuItem3);
+
+        jMenuBar1.add(regiscar);
+
+        jMenu7.setText("Visitantes ");
+
+        visitante.setText("Historial de visitante");
+        jMenu7.add(visitante);
+
+        jMenuBar1.add(jMenu7);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 491, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 610, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -269,18 +299,25 @@ public class VistaBase extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu6;
+    private javax.swing.JMenu jMenu7;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    public javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JPanel jPanel1;
     public javax.swing.JMenuItem propietarios;
+    public javax.swing.JMenu regiscar;
     public javax.swing.JMenuItem registropro;
     public javax.swing.JMenuItem registroresi;
     public javax.swing.JMenuItem registrotrab;
+    public javax.swing.JMenuItem regisuser;
     public javax.swing.JMenuItem residentes;
     public javax.swing.JButton resitrab;
     public javax.swing.JMenuItem tipoem;
     public javax.swing.JMenuItem tipoturn;
     public javax.swing.JMenuItem trabajadores;
+    public javax.swing.JMenuItem visitante;
     public javax.swing.JButton zonas;
     // End of variables declaration//GEN-END:variables
 }

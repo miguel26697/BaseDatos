@@ -43,17 +43,17 @@ public class VistaTrab extends javax.swing.JFrame {
 
         jLabel2.setText("Filtros: ");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos", "Id", "Nombre", "Apellido", "Turno", "Tipo", "Hora de inicio", "Hora de salida", "Fecha de ingreso", "Telefono" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos", "Id", "Nombre", "Apellido", "Telefono", "Tipo", "Tipo-horario", "Hora de inicio", "Hora de salida", "Fecha de ingreso", " " }));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Id", "Nombre", "Apellido", "Direccion", "Telefono", "Salario", "Eps", "Caja Compensacion", "Tipo", "Fecha inicio", "Dias", "Horario entrada", "Horario salida"
+                "Id", "Nombre", "Apellido", "Direccion", "Telefono", "Salario", "Eps", "Caja Compensacion", "Tipo", "Fecha inicio", "Dias", "Tipo horario", "Horario entrada", "Horario salida"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -87,7 +87,7 @@ public class VistaTrab extends javax.swing.JFrame {
                                         .addGap(18, 18, 18)
                                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jLabel3))
-                                .addGap(0, 790, Short.MAX_VALUE)))
+                                .addGap(0, 841, Short.MAX_VALUE)))
                         .addContainerGap())))
         );
         jPanel1Layout.setVerticalGroup(
@@ -171,6 +171,6 @@ public class VistaTrab extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
+    public javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
