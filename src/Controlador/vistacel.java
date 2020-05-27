@@ -39,6 +39,7 @@ public class vistacel implements ActionListener {
             vistaregis.setVisible(true);
             if(conta==1){
             RegistroVisitante regisvi =new RegistroVisitante(vistacel,vistaregis,con);
+      
             this.conta++;
             }}
         

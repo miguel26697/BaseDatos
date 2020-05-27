@@ -40,7 +40,6 @@ import Vista.VistaRegistroUser;
 import Vista.VistaRegistroCarro;
 import Vista.VistaVisitante;
 
-
 /**
  *
  * @author Jairo
@@ -104,6 +103,34 @@ public class ingreso implements ActionListener {
 
     }
 
+    public void iniciar() {
+        VistaBase.setLocationRelativeTo(null);
+        Vingre.setLocationRelativeTo(null);
+        vistaapr.setLocationRelativeTo(null);
+        vistarz.setLocationRelativeTo(null);
+        Vingre.setLocationRelativeTo(null);
+        VistaBase.setLocationRelativeTo(null);
+        vistapro.setLocationRelativeTo(null);
+        vistarp.setLocationRelativeTo(null);
+        vistars.setLocationRelativeTo(null);
+        vistarr.setLocationRelativeTo(null);
+        vistatrab.setLocationRelativeTo(null);
+        vistart.setLocationRelativeTo(null);
+        vistazona.setLocationRelativeTo(null);
+        vistatr.setLocationRelativeTo(null);
+        vistaactpro.setLocationRelativeTo(null);
+        vistaactres.setLocationRelativeTo(null);
+        vistaem.setLocationRelativeTo(null);
+        vistare.setLocationRelativeTo(null);
+        vistaz.setLocationRelativeTo(null);
+        vistaacttrab.setLocationRelativeTo(null);
+        vistacel.setLocationRelativeTo(null);
+        vistavisi.setLocationRelativeTo(null);
+        vistarcarro.setLocationRelativeTo(null);
+        vistaregiu.setLocationRelativeTo(null);
+        vistaresi.setLocationRelativeTo(null);
+    }
+
     @Override
     public void actionPerformed(ActionEvent x) {
 
@@ -126,7 +153,7 @@ public class ingreso implements ActionListener {
                         }
                     } else if (rs.getString("tipo").equals("Contra")) {
                         if (rs.getString("clave").equals(Vingre.jPasswordField1.getText())) {
-                            vistaapr apr = new vistaapr(vistaapr, vistarz, con, vistaz,vistazona);
+                            vistaapr apr = new vistaapr(vistaapr, vistarz, con, vistaz, vistazona);
                             Vingre.setVisible(false);
                             vistaapr.setVisible(true);
                         } else if (!rs.getString("clave").equals(Vingre.jPasswordField1.getText())) {
@@ -134,7 +161,7 @@ public class ingreso implements ActionListener {
                         }
                     } else if (rs.getString("tipo").equals("celador")) {
                         if (rs.getString("clave").equals(Vingre.jPasswordField1.getText())) {
-                            vistacel vistace = new vistacel(vistacel, vistaresi, con,vistavisi);
+                            vistacel vistace = new vistacel(vistacel, vistaresi, con, vistavisi);
                             Vingre.setVisible(false);
                             vistacel.setVisible(true);
                         } else if (!rs.getString("clave").equals(Vingre.jPasswordField1.getText())) {

@@ -52,6 +52,7 @@ public class Conjunto {
         vistaingreso Vingre = new vistaingreso();
         VistaBase VistaBase = new VistaBase();
         Vingre.setVisible(true);
+        Vingre.setLocationRelativeTo(null);
         VistaBase vistabase = new VistaBase();
         VistaPropietarios vistapro = new VistaPropietarios();
         VistaRegistroP vistarp = new VistaRegistroP();
@@ -72,7 +73,8 @@ public class Conjunto {
         VistaRegistroCarro vistarcarro = new VistaRegistroCarro();
         VistaVisitante vistavisi = new VistaVisitante();
         ingreso conotra = new ingreso(Vingre, VistaBase, con, vistabase, vistapro, vistarp, vistars, vistarr, vistatrab, vistart, vistazona,
-                vistatr, vistaactpro, vistaactres, vistaem, vistare, vistaapr, vistarz, vistaz, vistaacttrab, vistacel, vistarevi, vistareu, vistarcarro, vistavisi);
+        vistatr, vistaactpro, vistaactres, vistaem, vistare, vistaapr, vistarz, vistaz, vistaacttrab, vistacel, vistarevi, vistareu, vistarcarro, vistavisi);
+        conotra.iniciar();
 
     }
 

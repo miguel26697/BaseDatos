@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Controlador;
+
 import Vista.VistaBase;
 import Vista.VistaPropietarios;
 import Vista.VistaRegistroP;
@@ -30,7 +31,8 @@ import Vista.VistaRegistroCarro;
  *
  * @author Jairo
  */
-public class Base  implements ActionListener {
+public class Base implements ActionListener {
+
     private VistaBase vistabase;
     private VistaPropietarios vistapro;
     private VistaRegistroP vistarp;
@@ -49,131 +51,126 @@ public class Base  implements ActionListener {
     private VistaRegistroUser vistaregiu;
     private VistaRegistroCarro vistarcarro;
     private VistaVisitante vistavisi;
-    private int conta,conta1,conta2,conta3,conta4,conta5,conta6,conta7,conta8,conta9,conta10,conta11,conta12,conta13;
-    
-    public Base(VistaBase vistabase,VistaPropietarios vistapro,VistaRegistroP vistarp, VistaResS vistars,VistaRegistroResid vistarr,
-            VistaTrab vistatrab,VistaRegistoTrab vistart,VistaZonas vistazona,
-            VistaTraRes vistatr,conexion con,VistaActPro vistaactpro,VistaActRes vistaactres,VistaTipoem vitaem,
-            VistaRegistroturno vistare,VistaActTrab vistaacttrab,VistaRegistroUser vistaregiu,VistaRegistroCarro vistarcarro,VistaVisitante vistavisi){
-    this.vistabase=vistabase;
-    this.vistapro=vistapro;
-    this.vistarp=vistarp;
-    this.vistars=vistars;
-    this.vistarr=vistarr;
-    this.vistatrab=vistatrab;
-    this.vistart=vistart;
-    this.vistazona=vistazona;
-    this.vistatr=vistatr;
-    this.vitaem=vitaem;
-    this.vistare=vistare;
-    this.vistarcarro=vistarcarro;
-    this.vistaregiu=vistaregiu;
-    this.vistaacttrab=vistaacttrab;
-    this.vistavisi=vistavisi;
-    this.con=con;
-    this.conta=1;
-    this.conta1=1;
-    this.conta2=1;
-    this.conta3=1;
-    this.conta4=1;
-    this.conta5=1;
-    this.conta6=1;
-    this.conta7=1;
-    this.conta8=1;
-    this.conta9=1;
-    this.conta10=1;
-    this.conta11=1;
-    this.conta12=1;
-    this.conta13=1;
-    this.vistaactpro=vistaactpro;
-    this.vistaactres=vistaactres;
-    this.vistabase.regisuser.addActionListener(this);
-    this.vistabase.acttrab.addActionListener(this);
-    this.vistabase.actpro.addActionListener(this);
-    this.vistabase.tipoem.addActionListener(this);
-    this.vistabase.tipoturn.addActionListener(this);
-    this.vistabase.actures.addActionListener(this);
-    this.vistabase.propietarios.addActionListener(this);
-    this.vistabase.registropro.addActionListener(this);
-    this.vistabase.registroresi.addActionListener(this);
-    this.vistabase.registrotrab.addActionListener(this);
-    this.vistabase.residentes.addActionListener(this);
-    this.vistabase.resitrab.addActionListener(this);
-    this.vistabase.trabajadores.addActionListener(this);
-    this.vistabase.zonas.addActionListener(this);
-    this.vistabase.jMenuItem3.addActionListener(this);
-    this.vistabase.visitante.addActionListener(this);
+    private int conta, conta1, conta2, conta3, conta4, conta5, conta6, conta7, conta8, conta9, conta10, conta11, conta12, conta13;
+
+    public Base(VistaBase vistabase, VistaPropietarios vistapro, VistaRegistroP vistarp, VistaResS vistars, VistaRegistroResid vistarr,
+            VistaTrab vistatrab, VistaRegistoTrab vistart, VistaZonas vistazona,
+            VistaTraRes vistatr, conexion con, VistaActPro vistaactpro, VistaActRes vistaactres, VistaTipoem vitaem,
+            VistaRegistroturno vistare, VistaActTrab vistaacttrab, VistaRegistroUser vistaregiu, VistaRegistroCarro vistarcarro, VistaVisitante vistavisi) {
+        this.vistabase = vistabase;
+        this.vistapro = vistapro;
+        this.vistarp = vistarp;
+        this.vistars = vistars;
+        this.vistarr = vistarr;
+        this.vistatrab = vistatrab;
+        this.vistart = vistart;
+        this.vistazona = vistazona;
+        this.vistatr = vistatr;
+        this.vitaem = vitaem;
+        this.vistare = vistare;
+        this.vistarcarro = vistarcarro;
+        this.vistaregiu = vistaregiu;
+        this.vistaacttrab = vistaacttrab;
+        this.vistavisi = vistavisi;
+        this.con = con;
+        this.conta = 1;
+        this.conta1 = 1;
+        this.conta2 = 1;
+        this.conta3 = 1;
+        this.conta4 = 1;
+        this.conta5 = 1;
+        this.conta6 = 1;
+        this.conta7 = 1;
+        this.conta8 = 1;
+        this.conta9 = 1;
+        this.conta10 = 1;
+        this.conta11 = 1;
+        this.conta12 = 1;
+        this.conta13 = 1;
+        this.vistaactpro = vistaactpro;
+        this.vistaactres = vistaactres;
+        this.vistabase.regisuser.addActionListener(this);
+        this.vistabase.acttrab.addActionListener(this);
+        this.vistabase.actpro.addActionListener(this);
+        this.vistabase.tipoem.addActionListener(this);
+        this.vistabase.tipoturn.addActionListener(this);
+        this.vistabase.actures.addActionListener(this);
+        this.vistabase.propietarios.addActionListener(this);
+        this.vistabase.registropro.addActionListener(this);
+        this.vistabase.registroresi.addActionListener(this);
+        this.vistabase.registrotrab.addActionListener(this);
+        this.vistabase.residentes.addActionListener(this);
+        this.vistabase.trabajadores.addActionListener(this);
+        this.vistabase.jMenuItem3.addActionListener(this);
+        this.vistabase.visitante.addActionListener(this);
     }
+
     
+
     @Override
     public void actionPerformed(ActionEvent x) {
-        if(x.getSource()==vistabase.visitante){
+        if (x.getSource() == vistabase.visitante) {
             vistabase.setVisible(false);
             vistavisi.setVisible(true);
-         if(conta13==1){
-         VVisitante vs=new VVisitante(vistabase,vistavisi,con);
-         conta13++;
-         }
+            if (conta13 == 1) {
+                VVisitante vs = new VVisitante(vistabase, vistavisi, con);
+                conta13++;
+            }
         }
-        
-        
-        
-        if(x.getSource()==vistabase.jMenuItem3){
-        vistabase.setVisible(false);
-        vistarcarro.setVisible(true);
-        if(conta10==1){
-        RegistroCarro regisca =new RegistroCarro(vistabase,vistarcarro,con);
-        conta10++;
+
+        if (x.getSource() == vistabase.jMenuItem3) {
+            vistabase.setVisible(false);
+            vistarcarro.setVisible(true);
+            if (conta10 == 1) {
+                RegistroCarro regisca = new RegistroCarro(vistabase, vistarcarro, con);
+                conta10++;
+            }
         }
+
+        if (x.getSource() == vistabase.regisuser) {
+            vistabase.setVisible(false);
+            vistaregiu.setVisible(true);
+            if (conta9 == 1) {
+                RegistroUser regis = new RegistroUser(vistabase, vistaregiu, con);
+                conta9++;
+            }
         }
-        
-        
-        if(x.getSource()== vistabase.regisuser){
-        vistabase.setVisible(false);
-       vistaregiu.setVisible(true);
-        if(conta9==1){
-        RegistroUser regis =new RegistroUser(vistabase,vistaregiu,con);
-        conta9++;
+
+        if (x.getSource() == vistabase.acttrab) {
+            vistabase.setVisible(false);
+            vistaacttrab.setVisible(true);
+            if (conta8 == 1) {
+                acttrab act = new acttrab(vistabase, vistaacttrab, con);
+                conta8++;
+            }
         }
+
+        if (x.getSource() == vistabase.tipoturn) {
+            vistabase.setVisible(false);
+            vistare.setVisible(true);
+            if (conta7 == 1) {
+                RegistroTurno vy = new RegistroTurno(vistabase, vistare, con);
+                conta7++;
+            }
+
         }
-        
-        if(x.getSource()== vistabase.acttrab){
-        vistabase.setVisible(false);
-        vistaacttrab.setVisible(true);
-        if(conta8==1){
-        acttrab act =new acttrab(vistabase,vistaacttrab,con);
-            conta8++;
+        if (x.getSource() == vistabase.propietarios) {
+            vistabase.setVisible(false);
+            vistapro.setVisible(true);
+            if (conta5 == 1) {
+                VPropietarios vp = new VPropietarios(vistapro, vistabase, con);
+                conta5++;
+            }
         }
+        if (x.getSource() == vistabase.tipoem) {
+            vistabase.setVisible(false);
+            vitaem.setVisible(true);
+            if (conta6 == 1) {
+                RegistroTipotra ve = new RegistroTipotra(vistabase, vitaem, con);
+                conta6++;
+            }
         }
-        
-        if(x.getSource()== vistabase.tipoturn){
-         vistabase.setVisible(false);
-        vistare.setVisible(true);
-        if(conta7==1){
-        RegistroTurno vy =new RegistroTurno (vistabase,vistare,con);
-        conta7++;
-        }
-        
-        }
-        if(x.getSource()== vistabase.propietarios){  
-        vistabase.setVisible(false);
-        vistapro.setVisible(true);
-        if(conta5==1){
-        VPropietarios vp =new VPropietarios(vistapro,vistabase,con);
-        conta5++;
-        }
-        }
-        if(x.getSource()== vistabase.tipoem){
-        vistabase.setVisible(false);
-        vitaem.setVisible(true);
-        if(conta6==1){
-        RegistroTipotra ve =new RegistroTipotra (vistabase,vitaem,con);
-        conta6++;
-        }
-        }
-        
-        
-        
+
         if (x.getSource() == vistabase.registropro) {
             vistabase.setVisible(false);
             vistarp.setVisible(true);
@@ -182,68 +179,58 @@ public class Base  implements ActionListener {
                 conta++;
             }
         }
-        if(x.getSource()==vistabase.residentes){
-        vistabase.setVisible(false);
-        vistars.setVisible(true);
-        if(conta12==1){
-        VResidentes vr=new VResidentes(vistars,vistabase,con);
-        conta12++;
-        }
-        }
-        if(x.getSource()==vistabase.registroresi){
+        if (x.getSource() == vistabase.residentes) {
             vistabase.setVisible(false);
-        vistarr.setVisible(true);
-       if(conta1==1){
-         RegistoResidente rg=new RegistoResidente(vistabase,con,vistabase,vistapro, vistarp,  vistars, vistarr,vistatrab,vistart,vistazona,vistatr);
-         this.conta1++;
-       }
+            vistars.setVisible(true);
+            if (conta12 == 1) {
+                VResidentes vr = new VResidentes(vistars, vistabase, con);
+                conta12++;
+            }
         }
-        if(x.getSource()==vistabase.actpro){
-            
+        if (x.getSource() == vistabase.registroresi) {
+            vistabase.setVisible(false);
+            vistarr.setVisible(true);
+            if (conta1 == 1) {
+                RegistoResidente rg = new RegistoResidente(vistabase, con,vistarr);
+                this.conta1++;
+            }
+        }
+        if (x.getSource() == vistabase.actpro) {
+
             vistabase.setVisible(false);
             vistaactpro.setVisible(true);
-            if(conta2==1){
-             actupro act=new actupro(vistabase,vistaactpro,con);
-             this.conta2++;
-       }
+            if (conta2 == 1) {
+                actupro act = new actupro(vistabase, vistaactpro, con);
+                this.conta2++;
+            }
         }
-        if(x.getSource() == vistabase.actures){
-        vistabase.setVisible(false);
-        vistaactres.setVisible(true);
-         if(conta3==1){
-             actures act=new actures(vistaactres,vistabase,con);
-             this.conta3++;
-       }
-        }
-        
-        
-        if(x.getSource()==vistabase.trabajadores){
-        vistabase.setVisible(false);
-        vistatrab.setVisible(true);
-        if(conta11==1){
-        VTrabajadores vt=new VTrabajadores(vistabase,vistatrab,con);
-        conta11++;
-        }
-        
-        
-        }
-        if(x.getSource()==vistabase.registrotrab){
-        vistabase.setVisible(false);
-        vistart.setVisible(true);
-        if(conta4==1){
-            RegistroTrabajador res=new RegistroTrabajador(vistabase,vistart,con);
-            this.conta4++;
-        }
-        }
-        if(x.getSource()== vistabase.resitrab){
+        if (x.getSource() == vistabase.actures) {
             vistabase.setVisible(false);
-            vistatr.setVisible(true);
+            vistaactres.setVisible(true);
+            if (conta3 == 1) {
+                actures act = new actures(vistaactres, vistabase, con);
+                this.conta3++;
+            }
         }
-         if(x.getSource()== vistabase.zonas){
+
+        if (x.getSource() == vistabase.trabajadores) {
             vistabase.setVisible(false);
-            vistazona.setVisible(true);
+            vistatrab.setVisible(true);
+            if (conta11 == 1) {
+                VTrabajadores vt = new VTrabajadores(vistabase, vistatrab, con);
+                conta11++;
+            }
+
         }
-        
+        if (x.getSource() == vistabase.registrotrab) {
+            vistabase.setVisible(false);
+            vistart.setVisible(true);
+            if (conta4 == 1) {
+                RegistroTrabajador res = new RegistroTrabajador(vistabase, vistart, con);
+                this.conta4++;
+            }
+        }
+
     }
-    
+
 }

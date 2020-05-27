@@ -1,3 +1,4 @@
+drop database if exists conjunto;
 create database conjunto;
 use conjunto;
 
@@ -22,7 +23,9 @@ id_apto varchar(30),
 foreign key (id_apto) references apto(id_apto)
 );
 create table parqueadero(
-bahia varchar(30)  primary key,
+id_parqueadero varchar(6) primary key,
+bahia varchar(30)  ,
+pp varchar(2),
 id_residente varchar(30),
 foreign key (id_residente) references residentes(id_residente)
 );
@@ -34,7 +37,7 @@ modelo varchar(10),
 id_residente varchar(30),
 id_parqueadero varchar(10),
 foreign key (id_residente) references residentes(id_residente),
-foreign key (id_parqueadero) references parqueadero(bahia)
+foreign key (id_parqueadero) references parqueadero(id_parqueadero)
 );
 
 create table recibo(
@@ -56,8 +59,8 @@ id_turno varchar(10) primary key,
 pago_hora integer,
 tipo  varchar(30),
 dias varchar(30),
-horario_entrada time,
-horario_salida time
+horario_entrada varchar(10),
+horario_salida varchar(10)
 );
 create table tipoemp(
 id_tipo varchar(10) primary key,
@@ -83,7 +86,7 @@ nombre varchar(30),
 apellidos varchar(30),
 carro varchar(2),
 placa varchar(30),
-fecha datetime,
+fecha date,
 id_apto varchar(10),
 foreign key (id_apto) references apto(id_apto)
 );
@@ -111,21 +114,51 @@ insert into usuario values("jairo","1234","admin");
 insert into usuario values("miguel","1234","celador");
 insert into usuario values("johan","1234","Contra");
 insert into apto values("T1A2b","normal","1234");
-insert into apto values("T1A1b","normal","1");
+
+insert into apto values("T1A101","Normal","1234");
+insert into apto values("T1A102","Duplex","1234");
+insert into apto values("T1A103","Normal","1234");
+insert into apto values("T1A201","Duplex","1234");
+insert into apto values("T1A202","Normal","1234");
+insert into apto values("T1A203","Normal","1234");
+
 select * from residentes;
-insert into residentes value("1","miguel","rippe","350750","T1A1b");
+select * from turnos;
+insert into residentes value("1","miguel","rippe","350750","T1A2b");
 
 
 insert into tipoemp values("1","celador");
 insert into turnos values("1",5000,"nocturno","7","24:00","8:00");
+insert into tipoemp values("2","aseador");
+insert into turnos values("2",5000,"nocturno","7","8:00","17:00");
 
 insert into recibo values("01","12/01/2020","12/02/2020",250000,"1234");
-insert into recibo values("02","12/01/2020","12/02/2020",280000,"1");
 
 
 insert into pago values("si","01");
-insert into pago values("si","02");
 
+select * from turnos;
 insert into zonas values("1","Libres");
+insert into parqueadero values("1","2","si","1");
+insert into carro values("1","negro","nissam","2010","1","1");
 
+select*from residentes;
+
+insert into zonas values("3","recreacion");
+
+create table auditoria_visitantes(
+id int not null auto_increment primary key,
+nombre varchar(30),
+placa varchar(30),
+id_apto varchar (30),
+usuario varchar(20),
+fecha_cambio datetime
+);
+
+select * from auditoria_visitantes;
+create trigger auditoria1
+after insert on visitante
+for each row
+insert into auditoria_visitantes (id, nombre,placa,id_apto,usuario, fecha_cambio)
+values (new.id_visitante, new.nombre,new.placa,new.id_apto,current_user(), now());
 

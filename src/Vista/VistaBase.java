@@ -34,10 +34,7 @@ public class VistaBase extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jMenu5 = new javax.swing.JMenu();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        resitrab = new javax.swing.JButton();
-        zonas = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         propietarios = new javax.swing.JMenuItem();
@@ -75,54 +72,21 @@ public class VistaBase extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Miguel companys asociados J.S.");
-
-        resitrab.setText("Residiarios/Trabajdores");
-        resitrab.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                resitrabActionPerformed(evt);
-            }
-        });
-
-        zonas.setText("Zonas");
-        zonas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                zonasActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(53, 53, 53)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(resitrab)
-                        .addGap(130, 130, 130)
-                        .addComponent(zonas, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(199, 199, 199))))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(161, 161, 161)
-                .addComponent(jLabel1)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jLabel2)
+                .addGap(407, 557, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(41, 41, 41)
                 .addComponent(jLabel2)
-                .addGap(187, 187, 187)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(resitrab, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(zonas, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(241, Short.MAX_VALUE))
         );
 
         jMenu1.setText("Propietarios");
@@ -217,7 +181,7 @@ public class VistaBase extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 610, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -226,14 +190,6 @@ public class VistaBase extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void resitrabActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resitrabActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_resitrabActionPerformed
-
-    private void zonasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zonasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_zonasActionPerformed
 
     private void actproActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actproActionPerformed
         // TODO add your handling code here:
@@ -292,7 +248,6 @@ public class VistaBase extends javax.swing.JFrame {
     public javax.swing.JMenuItem acttrab;
     public javax.swing.JMenuItem actures;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu1;
@@ -313,11 +268,9 @@ public class VistaBase extends javax.swing.JFrame {
     public javax.swing.JMenuItem registrotrab;
     public javax.swing.JMenuItem regisuser;
     public javax.swing.JMenuItem residentes;
-    public javax.swing.JButton resitrab;
     public javax.swing.JMenuItem tipoem;
     public javax.swing.JMenuItem tipoturn;
     public javax.swing.JMenuItem trabajadores;
     public javax.swing.JMenuItem visitante;
-    public javax.swing.JButton zonas;
     // End of variables declaration//GEN-END:variables
 }

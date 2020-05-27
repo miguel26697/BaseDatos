@@ -38,7 +38,7 @@ public class RegistroCarro implements ActionListener {
         if (e.getSource() == vistarp.jButton1) {
             if (vistarp.jTextField1.getText().length() != 0 && vistarp.jTextField2.getText().length() != 0 && vistarp.jTextField3.getText().length() != 0 && vistarp.jTextField4.getText().length() != 0 && vistarp.jTextField5.getText().length() != 0) {
                 try {
-                    int placa = Integer.parseInt(vistarp.jTextField1.getText());
+                    String placa = vistarp.jTextField1.getText();
                     String color = vistarp.jTextField2.getText();
                     String marca = vistarp.jTextField3.getText();
                     String modelo = vistarp.jTextField4.getText();
@@ -46,7 +46,7 @@ public class RegistroCarro implements ActionListener {
                     int id_parqueadero = Integer.parseInt(vistarp.jTextField6.getText());
                     PreparedStatement ps;
                     try {
-                        ps = con.conexion().prepareStatement("insert into carro(placa,color,marca,modelo,id_residente,id_parqueadero)values('" + Integer.toString(placa) + "','" + color + "','" + marca + "','" + modelo + "','"
+                        ps = con.conexion().prepareStatement("insert into carro(placa,color,marca,modelo,id_residente,id_parqueadero)values('" + placa + "','" + color + "','" + marca + "','" + modelo + "','"
                                 + Integer.toString(id_residente) + "','" + Integer.toString(id_parqueadero) + "')");
                         ps.executeUpdate();
                         JOptionPane.showMessageDialog(null, "Registro Almacenado correctamete");

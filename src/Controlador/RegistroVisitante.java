@@ -30,36 +30,63 @@ public class RegistroVisitante implements ActionListener {
         this.con = con;
         this.vistarp.jButton1.addActionListener(this);
         this.vistarp.jButton2.addActionListener(this);
+        this.vistarp.jTextField5.setEnabled(false);
+    }
+
+    void iniciar() {
+        if ("Si".equals(vistarp.jComboBox3.getSelectedItem().toString())) {
+            this.vistarp.jTextField5.setEnabled(true);
+        } else if ("No".equals(vistarp.jComboBox3.getSelectedItem().toString())) {
+            this.vistarp.jTextField5.setEnabled(false);
+        }
+
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        if ("Si".equals(vistarp.jComboBox3.getSelectedItem().toString())) {
+            vistarp.jTextField5.setEnabled(true);
+        } else if ("No".equals(vistarp.jComboBox3.getSelectedItem().toString())) {
+            vistarp.jTextField5.setEnabled(false);
+        }
         if (e.getSource() == vistarp.jButton1) {
-            if (vistarp.jTextField1.getText().length() != 0 && vistarp.jTextField2.getText().length() != 0 && vistarp.jTextField3.getText().length() != 0 && vistarp.jTextField4.getText().length() != 0 && vistarp.jTextField5.getText().length() != 0
-                    && vistarp.jTextField6.getText().length() != 0 && vistarp.jTextField7.getText().length() != 0) {
+            if (vistarp.jTextField1.getText().length() != 0 && vistarp.jTextField2.getText().length() != 0 && vistarp.jTextField3.getText().length() != 0 && vistarp.jTextField5.getText().length() != 0
+                    && vistarp.jTextField6.getText().length() != 0) {
                 try {
                     int id_vis = Integer.parseInt(vistarp.jTextField1.getText());
                     String nombre = vistarp.jTextField2.getText();
                     String apellidos = vistarp.jTextField3.getText();
-                    String carro = vistarp.jTextField4.getText();
+                    if ("Si".equals(vistarp.jComboBox3.getSelectedItem().toString())) {
+                        vistarp.jTextField5.setEnabled(true);
+                    } else if ("No".equals(vistarp.jComboBox3.getSelectedItem().toString())) {
+                        vistarp.jTextField5.setEnabled(false);
+                    }
+
                     String placa = vistarp.jTextField5.getText();
                     String fecha = vistarp.jTextField6.getText();
-                    String id_apto = vistarp.jTextField7.getText();
+                    String id_apto = "";
+                    for (int i = 1; i < 6; i++) {
+                        for (int j = 1; j < 6; j++) {
+                            for (int k = 0; k < 6; k++) {
+                                if (("" + i + "").equals(vistarp.jComboBox1.getSelectedItem().toString()) && ("" + j + "0" + k + "").equals(vistarp.jComboBox2.getSelectedItem().toString())) {
+                                    id_apto = "T" + i + "A" + j + "0" + k;
+                                }
+                            }
+                        }
+                    }
 
                     PreparedStatement ps;
                     try {
                         ps = con.conexion().prepareStatement("insert into visitante(id_visitante,nombre,apellidos,carro,placa,fecha,id_apto)values('"
-                                + Integer.toString(id_vis) + "','" + nombre + "','" + apellidos + "','" + carro + "','" + placa + "','" + fecha + "','" + id_apto+ "')");
+                                + Integer.toString(id_vis) + "','" + nombre + "','" + apellidos + "','" + vistarp.jComboBox3.getSelectedItem().toString() + "','" + placa + "','" + fecha + "','" + id_apto + "')");
                         ps.executeUpdate();
                         JOptionPane.showMessageDialog(null, "Registro Almacenado correctamete");
                         vistarp.jTextField1.setText(null);
                         vistarp.jTextField2.setText(null);
                         vistarp.jTextField3.setText(null);
-                        vistarp.jTextField4.setText(null);
+
                         vistarp.jTextField5.setText(null);
                         vistarp.jTextField6.setText(null);
-                        vistarp.jTextField7.setText(null);
 
                     } catch (Exception x) {
                         JOptionPane.showMessageDialog(null, "Registro no Almacenado " + x.getMessage());
@@ -77,6 +104,12 @@ public class RegistroVisitante implements ActionListener {
             vistarp.setVisible(false);
             vistarp.dispose();
             VistaBase.setVisible(true);
+            vistarp.jTextField1.setText(null);
+            vistarp.jTextField2.setText(null);
+            vistarp.jTextField3.setText(null);
+            vistarp.jTextField5.setText(null);
+            vistarp.jTextField6.setText(null);
+
         }
 
     }
