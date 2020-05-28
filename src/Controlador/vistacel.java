@@ -6,6 +6,7 @@
 package Controlador;
 import Vista.Vistacel;
 import Vista.VistaRegistroVisi;
+import Vista.VistaParqueadero;
 import conjunto.conexion;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -20,16 +21,20 @@ public class vistacel implements ActionListener {
     private VistaRegistroVisi vistaregis;
     private VistaVisitante vistavi;
     private conexion con;
-    private int conta,conta1;
-    public vistacel(Vistacel vistacel,VistaRegistroVisi vistaregis,conexion con,VistaVisitante vistavi){
+    private VistaParqueadero vp;
+    private int conta,conta1,conta2;
+    public vistacel(Vistacel vistacel,VistaRegistroVisi vistaregis,conexion con,VistaVisitante vistavi,VistaParqueadero vp){
     this.vistacel=vistacel;
     this.vistaregis=vistaregis;
+    this.vp=vp;
     this.vistavi=vistavi;
     this.con=con;
     this.conta=1;
     this.conta1=1;
+    this.conta2=1;
     this.vistacel.jMenuItem2.addActionListener(this);
     this.vistacel.jMenuItem1.addActionListener(this);
+    this.vistacel.jMenuItem3.addActionListener(this);
     }
 
     @Override
@@ -50,6 +55,14 @@ public class vistacel implements ActionListener {
               VVisitante1 vs=new VVisitante1(vistacel, vistavi,con);
             conta1++;
             }
+        }
+        if(e.getSource() == vistacel.jMenuItem3){
+         vistacel.setVisible(false);
+         vp.setVisible(true);
+        if(conta2 == 1){
+        VParqueaderos vap=new VParqueaderos (vistacel,vp,con);
+        conta2++;
+        }
         }
     }
 }

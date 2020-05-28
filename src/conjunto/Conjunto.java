@@ -33,6 +33,11 @@ import Vista.VistaRegistroVisi;
 import Vista.VistaRegistroUser;
 import Vista.VistaRegistroCarro;
 import Vista.VistaVisitante;
+import Vista.VistaActApa;
+import Vista.VistaActPar;
+import Vista.VistaPagoRecibos;
+import Vista.VistaRecibos;
+import Vista.VistaParqueadero;
 
 /**
  *
@@ -72,8 +77,14 @@ public class Conjunto {
         VistaRegistroVisi vistarevi = new VistaRegistroVisi();
         VistaRegistroCarro vistarcarro = new VistaRegistroCarro();
         VistaVisitante vistavisi = new VistaVisitante();
+        Vista.VistaActApa va=new Vista.VistaActApa();
+        VistaActPar vap =new VistaActPar();
+        VistaRecibos vistareci = new VistaRecibos();
+        VistaParqueadero vpa=new VistaParqueadero();
+        VistaPagoRecibos vistapreci = new VistaPagoRecibos();
         ingreso conotra = new ingreso(Vingre, VistaBase, con, vistabase, vistapro, vistarp, vistars, vistarr, vistatrab, vistart, vistazona,
-        vistatr, vistaactpro, vistaactres, vistaem, vistare, vistaapr, vistarz, vistaz, vistaacttrab, vistacel, vistarevi, vistareu, vistarcarro, vistavisi);
+        vistatr, vistaactpro, vistaactres, vistaem, vistare, vistaapr, vistarz, vistaz, vistaacttrab, vistacel,
+        vistarevi, vistareu, vistarcarro, vistavisi,va,vap,vistareci ,vistapreci ,vpa);
         conotra.iniciar();
 
     }

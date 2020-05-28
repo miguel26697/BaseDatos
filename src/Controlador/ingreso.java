@@ -39,6 +39,13 @@ import Vista.Vistacel;
 import Vista.VistaRegistroUser;
 import Vista.VistaRegistroCarro;
 import Vista.VistaVisitante;
+import Vista.VistaActApa;
+import java.util.Locale;
+import Vista.VistaActPar;
+import Vista.VistaPagoRecibos;
+import Vista.VistaRecibos;
+import Vista.VistaParqueadero;
+
 
 /**
  *
@@ -70,11 +77,19 @@ public class ingreso implements ActionListener {
     private VistaRegistroCarro vistarcarro;
     private VistaRegistroUser vistaregiu;
     private VistaRegistroVisi vistaresi;
+    private VistaActApa va;
+    private VistaParqueadero vpa;
+    private VistaActPar vap;
+       private VistaRecibos vistareci;
+    private VistaPagoRecibos vistapreci;
+
 
     public ingreso(vistaingreso Vingre, VistaBase VistaBase, conexion con, VistaBase vistabase, VistaPropietarios vistapro, VistaRegistroP vistarp,
             VistaResS vistars, VistaRegistroResid vistarr, VistaTrab vistatrab, VistaRegistoTrab vistart, VistaZonas vistazona, VistaTraRes vistatr,
             VistaActPro vistaactpro, VistaActRes vistaactres, VistaTipoem vistaem, VistaRegistroturno vistare, VistaApar vistaapr, VistaRegistroZona vistarz,
-            VistaRegistroUsozo vistaz, VistaActTrab vistaacttrab, Vistacel vistacel, VistaRegistroVisi vistaresi, VistaRegistroUser vistaregiu, VistaRegistroCarro vistarcarro, VistaVisitante vistavisi) {
+            VistaRegistroUsozo vistaz, VistaActTrab vistaacttrab, Vistacel vistacel, VistaRegistroVisi vistaresi,
+            VistaRegistroUser vistaregiu, VistaRegistroCarro vistarcarro, VistaVisitante vistavisi,VistaActApa va,
+            VistaActPar vap,VistaRecibos vistareci,VistaPagoRecibos vistapreci,VistaParqueadero vpa) {
         this.vistavisi = vistavisi;
         this.vistaz = vistaz;
         this.vistaapr = vistaapr;
@@ -91,6 +106,7 @@ public class ingreso implements ActionListener {
         this.vistazona = vistazona;
         this.vistatr = vistatr;
         this.con = con;
+        this.vpa=vpa;
         this.vistarcarro = vistarcarro;
         this.vistare = vistare;
         this.vistaem = vistaem;
@@ -99,6 +115,11 @@ public class ingreso implements ActionListener {
         this.vistaactpro = vistaactpro;
         this.vistacel = vistacel;
         this.vistaresi = vistaresi;
+        this.va=va;
+        this.vap=vap;
+          this.vistaresi = vistaresi;
+        this.vistapreci = vistapreci;
+        this.vistareci=vistareci;
         this.Vingre.jButton1.addActionListener(this);
 
     }
@@ -129,6 +150,11 @@ public class ingreso implements ActionListener {
         vistarcarro.setLocationRelativeTo(null);
         vistaregiu.setLocationRelativeTo(null);
         vistaresi.setLocationRelativeTo(null);
+        va.setLocationRelativeTo(null);
+        vap.setLocationRelativeTo(null);
+        vistareci.setLocationRelativeTo(null);
+        vistapreci.setLocationRelativeTo(null);
+        vpa.setLocationRelativeTo(null);
     }
 
     @Override
@@ -145,7 +171,7 @@ public class ingreso implements ActionListener {
                     if (rs.getString("tipo").equals("admin")) {
                         if (rs.getString("clave").equals(Vingre.jPasswordField1.getText())) {
                             Base bd = new Base(VistaBase, vistapro, vistarp, vistars, vistarr, vistatrab, vistart, vistazona,
-                                    vistatr, con, vistaactpro, vistaactres, vistaem, vistare, vistaacttrab, vistaregiu, vistarcarro, vistavisi);
+                                    vistatr, con, vistaactpro, vistaactres, vistaem, vistare, vistaacttrab, vistaregiu, vistarcarro, vistavisi,va,vap,vistapreci,vistareci);
                             Vingre.setVisible(false);
                             VistaBase.setVisible(true);
                         } else if (!rs.getString("clave").equals(Vingre.jPasswordField1.getText())) {
@@ -161,7 +187,7 @@ public class ingreso implements ActionListener {
                         }
                     } else if (rs.getString("tipo").equals("celador")) {
                         if (rs.getString("clave").equals(Vingre.jPasswordField1.getText())) {
-                            vistacel vistace = new vistacel(vistacel, vistaresi, con, vistavisi);
+                            vistacel vistace = new vistacel(vistacel, vistaresi, con, vistavisi,vpa);
                             Vingre.setVisible(false);
                             vistacel.setVisible(true);
                         } else if (!rs.getString("clave").equals(Vingre.jPasswordField1.getText())) {

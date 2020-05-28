@@ -3,39 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Vista/VistaRegistroVisi.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Controlador/RegistroCarro.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Vista/VistaRegistroResid.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Vista/VistaIngreso.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Vista/VistaIngresosEgresos.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Vista/VistaResS.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Vista/VistaZonas.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Modelo/Modelo.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Vista/VistaRegistroZona.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Vista/VistaRegistroturno.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Vista/VistaRegistroUsozo.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Vista/VistaRegistroCarro.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Vista/VistaTrab.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Vista/VistaRegistroUser.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Controlador/RegistoResidente.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Vista/VistaTipoem.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Controlador/Controlador.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Controlador/ingreso.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Controlador/VVisitante.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Vista/VistaVisitante.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Controlador/RegistroApto.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Vista/VistaTraRes.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Vista/VistaBase.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Vista/VistaRegistroApto.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Vista/VistaRegistoTrab.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Vista/VistaRegistroP.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Vista/VistaPagoRecibos.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Controlador/vistaapr.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/conjunto/Conjunto.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Controlador/RegistroProp.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Controlador/Base.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Controlador/VPropietarios.java</file>
-            <file>file:/C:/Users/migue/Desktop/BaseDatos/src/Controlador/RegistroVisitante.java</file>
+            <file>file:/C:/Users/Jairo/Documents/conjunto1/BaseDatos/src/Vista/VistaBase.java</file>
+            <file>file:/C:/Users/Jairo/Documents/conjunto1/BaseDatos/src/Controlador/ingreso.java</file>
+            <file>file:/C:/Users/Jairo/Documents/conjunto1/BaseDatos/src/Controlador/Base.java</file>
+            <file>file:/C:/Users/Jairo/Documents/conjunto1/BaseDatos/src/conjunto/Conjunto.java</file>
         </group>
     </open-files>
 </project-private>

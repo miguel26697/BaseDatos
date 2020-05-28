@@ -33,6 +33,9 @@ public class VistaBase extends javax.swing.JFrame {
         jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
         jLabel3 = new javax.swing.JLabel();
         jMenu5 = new javax.swing.JMenu();
+        jMenuBar2 = new javax.swing.JMenuBar();
+        jMenu8 = new javax.swing.JMenu();
+        jMenu9 = new javax.swing.JMenu();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -54,8 +57,14 @@ public class VistaBase extends javax.swing.JFrame {
         regisuser = new javax.swing.JMenuItem();
         regiscar = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
+        actpar = new javax.swing.JMenuItem();
         jMenu7 = new javax.swing.JMenu();
         visitante = new javax.swing.JMenuItem();
+        jMenu10 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenu11 = new javax.swing.JMenu();
+        actapa = new javax.swing.JMenuItem();
 
         jMenu3.setText("jMenu3");
 
@@ -69,6 +78,12 @@ public class VistaBase extends javax.swing.JFrame {
         jLabel3.setText("jLabel3");
 
         jMenu5.setText("jMenu5");
+
+        jMenu8.setText("File");
+        jMenuBar2.add(jMenu8);
+
+        jMenu9.setText("Edit");
+        jMenuBar2.add(jMenu9);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -166,6 +181,9 @@ public class VistaBase extends javax.swing.JFrame {
         jMenuItem3.setText("Registrar un carro");
         regiscar.add(jMenuItem3);
 
+        actpar.setText("Actualizar un parqueadero");
+        regiscar.add(actpar);
+
         jMenuBar1.add(regiscar);
 
         jMenu7.setText("Visitantes ");
@@ -175,13 +193,30 @@ public class VistaBase extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu7);
 
+        jMenu10.setText("Pagos");
+
+        jMenuItem2.setText("Generar Recibos");
+        jMenu10.add(jMenuItem2);
+
+        jMenuItem4.setText("Consultar una Factura");
+        jMenu10.add(jMenuItem4);
+
+        jMenuBar1.add(jMenu10);
+
+        jMenu11.setText("Apartamento");
+
+        actapa.setText("Actualizar el propietario de un apartamento");
+        jMenu11.add(actapa);
+
+        jMenuBar1.add(jMenu11);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -244,6 +279,8 @@ public class VistaBase extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JMenu Propietario;
+    public javax.swing.JMenuItem actapa;
+    public javax.swing.JMenuItem actpar;
     public javax.swing.JMenuItem actpro;
     public javax.swing.JMenuItem acttrab;
     public javax.swing.JMenuItem actures;
@@ -251,15 +288,22 @@ public class VistaBase extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu10;
+    private javax.swing.JMenu jMenu11;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenu jMenu7;
+    private javax.swing.JMenu jMenu8;
+    private javax.swing.JMenu jMenu9;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem1;
+    public javax.swing.JMenuItem jMenuItem2;
     public javax.swing.JMenuItem jMenuItem3;
+    public javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JPanel jPanel1;
     public javax.swing.JMenuItem propietarios;
     public javax.swing.JMenu regiscar;

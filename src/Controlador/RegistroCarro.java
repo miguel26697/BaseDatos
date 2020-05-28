@@ -43,11 +43,22 @@ public class RegistroCarro implements ActionListener {
                     String marca = vistarp.jTextField3.getText();
                     String modelo = vistarp.jTextField4.getText();
                     int id_residente = Integer.parseInt(vistarp.jTextField5.getText());
-                    int id_parqueadero = Integer.parseInt(vistarp.jTextField6.getText());
+                    String  id_parqueadero = "";
+                    for (int i = 1; i < 11; i++) {
+                for (int j = 1; j < 16; j++) {
+                    if (("" + i + "").equals(vistarp.jComboBox1.getSelectedItem().toString()) && ("" + j + "").equals(vistarp.jComboBox2.getSelectedItem().toString())) {
+                        id_parqueadero  = "B" + i + "P" + j;
+                    }
+
+                }
+            }
+                    
+                 
                     PreparedStatement ps;
                     try {
-                        ps = con.conexion().prepareStatement("insert into carro(placa,color,marca,modelo,id_residente,id_parqueadero)values('" + placa + "','" + color + "','" + marca + "','" + modelo + "','"
-                                + Integer.toString(id_residente) + "','" + Integer.toString(id_parqueadero) + "')");
+                        System.out.println(""+id_residente);
+                        ps = con.conexion().prepareStatement("insert into carro values('" + placa + "','" + color + "','" + marca + "','" + modelo + "','"
+                                + Integer.toString(id_residente) + "','" + id_parqueadero + "')");
                         ps.executeUpdate();
                         JOptionPane.showMessageDialog(null, "Registro Almacenado correctamete");
                         vistarp.jTextField1.setText(null);

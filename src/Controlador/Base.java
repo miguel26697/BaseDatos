@@ -26,6 +26,11 @@ import Vista.VistaRegistroturno;
 import Vista.VistaActTrab;
 import Vista.VistaRegistroUser;
 import Vista.VistaRegistroCarro;
+import Vista.VistaActApa;
+import Vista.VistaActPar;
+import Vista.VistaPagoRecibos;
+import Vista.VistaRecibos;
+
 
 /**
  *
@@ -51,12 +56,17 @@ public class Base implements ActionListener {
     private VistaRegistroUser vistaregiu;
     private VistaRegistroCarro vistarcarro;
     private VistaVisitante vistavisi;
-    private int conta, conta1, conta2, conta3, conta4, conta5, conta6, conta7, conta8, conta9, conta10, conta11, conta12, conta13;
+    private VistaActApa va;
+    private VistaActPar vap;
+        private VistaRecibos vistareci;
+    private VistaPagoRecibos vistapreci;
+    private int conta, conta1, conta2, conta3, conta4, conta5, conta6, conta7, conta8, conta9, conta10, conta11, conta12, conta13,conta14,conta15,conta16;
 
     public Base(VistaBase vistabase, VistaPropietarios vistapro, VistaRegistroP vistarp, VistaResS vistars, VistaRegistroResid vistarr,
             VistaTrab vistatrab, VistaRegistoTrab vistart, VistaZonas vistazona,
             VistaTraRes vistatr, conexion con, VistaActPro vistaactpro, VistaActRes vistaactres, VistaTipoem vitaem,
-            VistaRegistroturno vistare, VistaActTrab vistaacttrab, VistaRegistroUser vistaregiu, VistaRegistroCarro vistarcarro, VistaVisitante vistavisi) {
+            VistaRegistroturno vistare, VistaActTrab vistaacttrab, VistaRegistroUser vistaregiu,
+            VistaRegistroCarro vistarcarro, VistaVisitante vistavisi,VistaActApa va,VistaActPar vap,VistaPagoRecibos vistapreci,VistaRecibos vistareci) {
         this.vistabase = vistabase;
         this.vistapro = vistapro;
         this.vistarp = vistarp;
@@ -68,11 +78,15 @@ public class Base implements ActionListener {
         this.vistatr = vistatr;
         this.vitaem = vitaem;
         this.vistare = vistare;
+        this.va=va;
+        this.vap=vap;
         this.vistarcarro = vistarcarro;
         this.vistaregiu = vistaregiu;
         this.vistaacttrab = vistaacttrab;
         this.vistavisi = vistavisi;
         this.con = con;
+         this.vistareci = vistareci;
+        this.vistapreci = vistapreci;
         this.conta = 1;
         this.conta1 = 1;
         this.conta2 = 1;
@@ -87,6 +101,9 @@ public class Base implements ActionListener {
         this.conta11 = 1;
         this.conta12 = 1;
         this.conta13 = 1;
+        this.conta16=1;
+        this.conta14=1;
+        this.conta15=1;
         this.vistaactpro = vistaactpro;
         this.vistaactres = vistaactres;
         this.vistabase.regisuser.addActionListener(this);
@@ -103,12 +120,52 @@ public class Base implements ActionListener {
         this.vistabase.trabajadores.addActionListener(this);
         this.vistabase.jMenuItem3.addActionListener(this);
         this.vistabase.visitante.addActionListener(this);
+        this.vistabase.actapa.addActionListener(this);
+        this.vistabase.actpar.addActionListener(this);
+        this.vistabase.jMenuItem2.addActionListener(this);
+        this.vistabase.jMenuItem4.addActionListener(this);
     }
 
     
 
     @Override
     public void actionPerformed(ActionEvent x) {
+        if (x.getSource() == vistabase.jMenuItem2 || x.getSource() == vistabase.jMenuItem4) {
+            System.out.println("hola");
+            vistabase.setVisible(false);
+            if (x.getSource() == vistabase.jMenuItem2) {
+                vistareci.setVisible(true);
+            } else {
+                vistapreci.setVisible(true);
+            }
+            if (conta16 == 1) {
+                GenerarRecibo vrec = new GenerarRecibo(vistabase, vistareci, con, vistapreci);
+                conta16++;
+            }
+        }
+        
+        
+        
+        if(x.getSource() == vistabase.actpar){
+        vistabase.setVisible(false);
+        vap.setVisible(true);
+        if(conta15==1){
+            actpar ac=new actpar(vistabase,vap,con);
+        conta15++;
+        }
+        }
+        
+        
+        if(x.getSource()== vistabase.actapa){
+            vistabase.setVisible(false);
+            va.setVisible(true);
+            if(conta14==1){
+                actapa ac=new actapa(va,vistabase,con);
+                conta14++;
+        }
+        
+        }
+        
         if (x.getSource() == vistabase.visitante) {
             vistabase.setVisible(false);
             vistavisi.setVisible(true);
